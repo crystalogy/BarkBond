@@ -1,3 +1,6 @@
+// JS Code to detect header and footer size to try and fix sidebar issue
+// This did not resolve the sidebar issue
+
 // window.addEventListener('load', function() {
 //     let header = document.querySelector('header');
 //     let footer = document.querySelector('footer');
