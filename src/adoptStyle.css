@@ -1,0 +1,79 @@
+.sideBarContainer{
+    /*display: flex;*/
+    /*align-items: flex-start; !* This will align the sidebar and card container at the top *!*/
+    min-height: 100vh;
+    width: 200px;
+}
+
+.sideBar{
+    /*position: fixed;*/
+    flex-shrink: 0;
+    position: sticky;
+    /*top: 72px;*/
+    /*bottom: 30px;*/
+    height: 100vh;
+    /*left: 0;*/
+    /*right:0;*/
+    width: 200px;
+    /*height: calc(100vh - 72px - 30px); !* 72px is the height of the header and 30px is the height of the footer *!*/
+    background-color: white;
+}
+
+#cardContainer{
+    flex-grow:1;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    width: 70%;
+    margin-top: 100px;
+    margin-left: 20%;
+}
+
+.footerContainer {
+    height: 150px;
+    margin-top:1px;
+    background-color: #eeebe6;
+    /*overflow: auto; !* Add this line *!*/
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.card {
+    width: 200px;
+    height: 260px;
+    box-sizing: border-box;
+}
+
+.cardImg{
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.cardTextContainer{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#pageNumberBar{
+    position: sticky;
+    bottom: 0;
+    /*width: 100%;*/
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.modal-backdrop {
+    opacity: 0.9 !important; /* Adjust this value as needed */
+}
+
+.footerContainer {
+    height: 150px;
+    margin-top:1px;
+    background-color: #eeebe6;
+    /*overflow: auto; !* Add this line *!*/
+}
