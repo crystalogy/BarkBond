@@ -1,17 +1,17 @@
 html, body {
     /*height: 100%;*/
-    height: calc(100vh - 72px - 150px); /* 100vh is the full height of the viewport, 72px is the height of the header, and 150px is the height of the footer */
+    /*height: calc(100vh - 72px - 150px); !* 100vh is the full height of the viewport, 72px is the height of the header, and 150px is the height of the footer *!*/
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
 }
 
-header {
-    height: 72px;
-    background-color: #343a40;
-    z-index: 1000;
-}
+/*header {*/
+/*    height: 72px;*/
+/*    background-color: #343a40;*/
+/*    z-index: 1000;*/
+/*}*/
 
 footer {
     height: 150px;
@@ -26,17 +26,47 @@ main {
     width: 100%;
 }
 
+.locationBarContainer{
+    position: relative;
+    height: 45px;
+}
 
+.locationBar {
+     position: relative;
+     background-color: #ffdb6c;
+    /*#504746*/
+     height: 45px;
+     width: 100%;
+     z-index: 2;
+    align-content: center;
+    padding-left: 280px;
+ }
+
+:root {
+    --dropdown-color: #fff5d6;
+
+}
+
+.dropdown-toggle {
+    /*color: var(--nav-pills-link-active-color);*/
+    background-color: var(--dropdown-color);
+    color: #717171;
+
+);
+
+}
+
+/*--#{$prefix}dropdown-color: #{$dropdown-color};*/
 
 /*----------Sidebar Code------------*/
 
-.sideBarContainer{
-    display: flex;
-    /*align-items: flex-start; !* This will align the sidebar and card container at the top *!*/
-    min-height: 100vh;
-    width: 200px;
-    /*overflow: hidden;*/
-}
+/*.sideBarContainer{*/
+/*    display: flex;*/
+/*    !*align-items: flex-start; !* This will align the sidebar and card container at the top *!*!*/
+/*    min-height: 100vh;*/
+/*    width: 200px;*/
+/*    !*overflow: hidden;*!*/
+/*}*/
 
 .sideBar{
     position: fixed;
@@ -60,6 +90,7 @@ main {
 /*header{*/
 /*    z-index: 1000;*/
 /*}*/
+
 
 #pageNumberBar{
     position: sticky;
