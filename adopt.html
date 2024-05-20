@@ -22,19 +22,14 @@
       <!--                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>-->
     </a>
 
-    <!--            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">-->
-    <!--                <li><a href="index.html" class="nav-link px-2 text-black">Home</a></li>-->
-    <!--                <li><a href="#" class="nav-link px-2 text-black">About</a></li>-->
-    <!--                <li><a href="#" class="nav-link px-2 text-black">Resources</a></li>-->
-    <!--                <li><a href="na.html" class="nav-link px-2 text-black">Adopt</a></li>-->
-    <!--            </ul>-->
+
     <div class="mainNavContainer">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="adopt.html">Adopt</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a class="active" href="#about">About</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a class="active" href="#contact">Contact</a></li>
       </ul>
     </div>
 
@@ -124,16 +119,39 @@
 <div class="locationBarContainer">
 <div class="locationBar">
 
-  <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    Pet Type
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Dogs</a></li>
-    <li><a class="dropdown-item" href="#">Cats</a></li>
-    <li><a class="dropdown-item" href="#">Birds</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
-  </ul>
+<!--  <button type="button" class=".dropdown-menu" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--    Pet Type-->
+<!--  </button>-->
+<!--  <ul class="dropdown-menu petType">-->
+<!--    <li><a class="dropdown-item" href="#">Dogs</a></li>-->
+<!--    <li><a class="dropdown-item" href="#">Cats</a></li>-->
+<!--    <li><a class="dropdown-item" href="#">Birds</a></li>-->
+<!--    <li><hr class="dropdown-divider"></li>-->
+<!--    <li><a class="dropdown-item" href="#">Separated link</a></li>-->
+<!--  </ul>-->
+
+
+    <div class="dropdown-petType hover">
+      <a href="#">Pet Type</a>
+      <ul>
+        <li><a href="#">Dogs</a></li>
+        <li><a href="#">Cats</a></li>
+        <li><a href="#">Birds</a></li>
+        <li><a href="#">Rabbits</a></li>
+        <li><a href="#">Small & Furry</a></li>
+        <li><a href="#">Horses</a></li>
+        <li><a href="#">Scales Fins & Others</a></li>
+        <li><a href="#">Barnyard</a></li>
+      </ul>
+    </div>
+
+
+
+
+
+<!--  <label for="locationSearch"></label><input type="text" id="locationSearch" placeholder="Enter City, State, or ZIP" class="your-search-box-class">-->
+  <input class="form-control location" type="text" placeholder="Enter City, State, or ZIP" aria-label="default input example">
+
 
 </div>
 </div>
@@ -149,7 +167,9 @@
 
 <!------------------------------- ⬇️⬇️⬇️ Cards ⬇️⬇️⬇️---------------->
 <div id="cardContainer">
-  <div id="cards"></div>
+    <div id="cardOutline">
+      <div id="cards"></div>
+  </div>
 </div>
 <!------------------------------- ⬆️⬆️⬆️ Cards ⬆️⬆️⬆️---------------->
 
