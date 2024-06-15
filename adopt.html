@@ -8,14 +8,17 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="src/style.css">
   <link rel="stylesheet" href="src/adoptStyle.css">
-  <!--    <script src="script.js"></script>-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,499;1,499&display=swap" rel="stylesheet">
 </head>
 <body>
 <header class="header">
   <div class="headerContainer">
     <!--        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">-->
-    <a href="/"
-       class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none justify-content-start">
+    <a href="/">
+       <!-- class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none justify-content-start"> -->
       <div class="logoContainer">
         <img width="210" class="logo" src="assets/logo.png" alt="logo">
       </div>
@@ -23,15 +26,57 @@
     </a>
 
 
+
     <div class="mainNavContainer">
-      <ul>
+      <nav class="mainnav">
+      <ul class="menuItems">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="adopt.html">Adopt</a></li>
         <li><a href="resources.html">Resources</a></li>
-        <li><a class="active" href="#contact">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="help.html">Ways to give</a></li>
       </ul>
+      </nav>
     </div>
+
+    <!-- working on making this nav work with drop down for adopt-->
+<!--    <div class="mainNavContainer">-->
+<!--      <ul>-->
+<!--        <li><a href="index.html">Home</a></li>-->
+<!--        <li><a href="about.html">About</a></li>-->
+<!--        <li class="adoptNavDropDown">-->
+<!--          <a href="adopt.html" class="adoptDropDownToggle"> Adopt <span class="material-icons navExpandArrow">expand_more</span></a>-->
+<!--          <ul class="navAdoptDropdown">-->
+<!--            <li><a class="navAdoptDropdownItem" href="#">Option 1</a></li>-->
+<!--            <li><a class="navAdoptDropdownItem" href="#">Option 2</a></li>-->
+<!--            <li><a class="navAdoptDropdownItem" href="#">Option 3</a></li>-->
+<!--          </ul>-->
+<!--        </li>-->
+<!--        <li><a href="resources.html">Resources</a></li>-->
+<!--        <li><a href="#contact">Contact</a></li>-->
+<!--      </ul>-->
+<!--    </div>-->
+
+
+<!--    <div class="mainNavContainer">-->
+<!--      <nav>-->
+<!--        <a href="index.html">Home</a>-->
+<!--        <a href="about.html">About</a>-->
+<!--        <div class="adoptNavDropDown">-->
+<!--          <a href="adopt.html" class="adoptDropDownToggle"> Adopt <span class="material-icons navExpandArrow">expand_more</span></a>-->
+<!--          <div class="navAdoptDropdownMenu">-->
+<!--            <a class="navAdoptDropdownItem" href="#">Option 1</a>-->
+<!--            <a class="navAdoptDropdownItem" href="#">Option 2</a>-->
+<!--            <a class="navAdoptDropdownItem" href="#">Option 3</a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        <li><a href="adopt.html">Adopt</a></li>&ndash;&gt;-->
+<!--        <a href="resources.html">Resources</a>-->
+<!--        <a href="#contact">Contact</a>-->
+<!--      </nav>-->
+<!--    </div>-->
+
 
     <!--------------------------------------------- Search Bar ---------------------------------------------->
     <!--            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">-->
@@ -119,17 +164,6 @@
 <div class="locationBarContainer">
 <div class="locationBar">
 
-<!--  <button type="button" class=".dropdown-menu" data-bs-toggle="dropdown" aria-expanded="false">-->
-<!--    Pet Type-->
-<!--  </button>-->
-<!--  <ul class="dropdown-menu petType">-->
-<!--    <li><a class="dropdown-item" href="#">Dogs</a></li>-->
-<!--    <li><a class="dropdown-item" href="#">Cats</a></li>-->
-<!--    <li><a class="dropdown-item" href="#">Birds</a></li>-->
-<!--    <li><hr class="dropdown-divider"></li>-->
-<!--    <li><a class="dropdown-item" href="#">Separated link</a></li>-->
-<!--  </ul>-->
-
 
     <div class="dropdown-petType hover">
       <a href="#">Pet Type</a>
@@ -144,8 +178,6 @@
         <li><a href="#">Barnyard</a></li>
       </ul>
     </div>
-
-
 
 
 
@@ -178,5 +210,30 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+<div id="pageNumContainer">
+  <div class="pagination" id="adoptPagination">
+      <a href="#"><link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <span class="material-icons-round arrows">arrow_back_ios</span></a>
+      <a href="#">1</a>
+      <a href="#" class="active">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+      <a href="#"><link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <span class="material-icons-round arrows">arrow_forward_ios</span></a>
+  </div>
+</div>
+
+
+<script src='script.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+<footer>
+
+</footer>
 </html>

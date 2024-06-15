@@ -7,18 +7,31 @@ html, body {
     flex-direction: column;
 }
 
+/*login and signup modal*/
+
+.modal-backdrop {
+    opacity: 0.20 !important;
+    z-index: 2;
+}
+
+.modal-content {
+    z-index: 3!important;
+} 
+
+
+
 /*header {*/
 /*    height: 72px;*/
 /*    background-color: #343a40;*/
 /*    z-index: 1000;*/
 /*}*/
 
-footer {
-    height: 150px;
-    background-color: #eeebe6 !important;
-    z-index:1000;
-    /*overflow: hidden;*/
-}
+/*footer {*/
+/*    height: 150px;*/
+/*    background-color: #eeebe6 !important;*/
+/*    z-index:1000;*/
+/*    !*overflow: hidden;*!*/
+/*}*/
 
 main {
     display: flex;
@@ -42,37 +55,10 @@ main {
      width: 100%;
      z-index: 2;
     align-content: center;
-    padding-left: 280px;
+    padding-left: 300px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
  }
 
-/*:root {*/
-/*    --dropdown-color: #ffffff;*/
-
-/*}*/
-
-/*.dropdown-toggle {*/
-/*    !*color: var(--nav-pills-link-active-color);*!*/
-/*    background-color: var(--dropdown-color);*/
-/*    color: #717171;*/
-/*}*/
-
-/*.dropdown-menu.petType{*/
-/*    cursor: pointer;*/
-/*    outline:0;*/
-/*    color: #333333;*/
-/*    font-size: 14px;*/
-/*    padding: 6px 10px;*/
-/*    min-width: 207px;*/
-/*    border-radius: 5px;*/
-/*    border: 1px solid #d6d6d6;*/
-/*    background-color: #ffffff;*/
-/*}*/
-/*.dropdown-menu.petType:hover, .dropdown-menu.petType:focus {*/
-/*    background-color: #ffffff;*/
-/*    color: #000000;*/
-/*    border: 1px solid #969696;*/
-/*}*/
 
 
 .dropdown-petType {
@@ -245,7 +231,8 @@ main {
     display: flex;
     flex-wrap: wrap;;
     justify-content: space-between;
-    gap: 25px;
+    gap: 45px;
+    row-gap: 50px;
 }
 
 .card {
@@ -280,12 +267,43 @@ main {
 
 }
 
+/*---------Next Page Number Bar (pagination)---------*/
 
-.modal-backdrop {
-    opacity: 0.9 !important;
+#pageNumContainer{
+    display: flex;
+    justify-content: center;
+    margin-left: 200px;
+    margin-bottom: 20px;
 }
 
-.modal-content {
-    z-index: 1050 !important;
+.pagination {
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 40px;
+    margin-top: 60px;
 }
 
+.pagination a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #0cc0df;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 40px;
+}
+
+.material-icons-round.arrows:hover{
+    color: #0cc0df;
+}
