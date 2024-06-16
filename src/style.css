@@ -1,6 +1,6 @@
-.container {
+/* .container {
   width: 100%;
-}
+} */
 
 /* @media screen and (max-width: 600px) {
   .headerContainer {
@@ -126,13 +126,6 @@ header {
   padding: 10px 20px;
 }
 
-.header{
-  /*background-color: #FEF9EF !important;*/
-  background-color: #ffffff !important;
-  /* height: 11vh; */
-  z-index: 2;
-}
-
 
 .logoContainer{
   display: flex;
@@ -149,12 +142,12 @@ header {
   max-width: 100%;
 }
 
-
-
 .mainnav {
   flex-grow: 1;
   display: flex;
   justify-content: center;
+  width: 100%;
+
 }
 
 .menuItems {
@@ -180,7 +173,7 @@ header {
 }
 
 .menuItems a:hover {
-  color: #95a5a6;
+  color: #a6959b;
 }
 
 .loginsign-btn-div {
@@ -188,8 +181,7 @@ header {
   align-items: center;
 }
 
-.btn {
-  background-color: #FDA763;
+/* .btnls {
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -198,30 +190,53 @@ header {
   text-transform: uppercase;
   font-size: 12px;
   transition: background-color 0.3s;
+} */
+
+
+/*sign up button*/
+.signup-btn{
+  white-space: nowrap;
+  background-color: #FDA763 !important;
+  margin-left: 15px;
+  /* position: absolute; */
+  height: 30px;
+  width: 80px;
 }
 
-.btn:hover {
-  background-color: #e89542;
+/* .signup-btn:hover {
+  color: #63fdc2;
 }
+ */
 
-.signup-btn {
-  background-color: #FDA763;
+/*login button*/
+.login-btn:hover {
+  background-color: #0cbfdf71;
 }
 
 .login-btn {
-  background-color: #ddd;
+  /* background-color: #ddd;
+  color: #333; */
+  background-color: transparent;
   color: #333;
+  border: 1px solid #333; 
+  height: 30px;
+  width: 80px;
 }
+
+.loginsign-btn-div{
+  margin-left: auto;
+  /*position: relative;*/
+  /* padding-right: 140px; */
+}
+
+
+
 
 /* Media Queries */
 @media (max-width: 768px) {
   .headerContainer {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .mainnav {
-    width: 100%;
   }
 
   .menuItems {
@@ -255,7 +270,7 @@ header {
   }
 }
 
-    a {
+.mainnav li {
       position: relative;
       /* display: inline-block; */
       display: flex;
@@ -295,32 +310,3 @@ header {
         transform-origin: left;
       }
     }
-  }
-}
-}
-
-/*sign up button*/
-
-.signup-btn{
-  white-space: nowrap;
-  background-color: #FDA763 !important;
-  margin-left: 15px;
-  position: absolute;
-  height: 40px;
-  width: 80px;
-}
-
-/*login button*/
-.login-btn{
-  height: 40px;
-  width: 80px;
-}
-
-
-
-
-.loginsign-btn-div{
-  margin-left: auto;
-  /*position: relative;*/
-  padding-right: 140px;
-}

@@ -7,7 +7,7 @@ html, body {
     flex-direction: column;
 }
 
-/*login and signup modal*/
+/* login and signup modal
 
 .modal-backdrop {
     opacity: 0.20 !important;
@@ -16,7 +16,7 @@ html, body {
 
 .modal-content {
     z-index: 3!important;
-} 
+}  */
 
 
 
@@ -61,7 +61,101 @@ main {
 
 
 
-.dropdown-petType {
+ .dropdown-petType {
+	width: 230px;
+	display: inline-block;
+	margin-right: 10px;
+	position: relative;
+}
+
+.dropdown-petType > a::after,
+.dropdown-petType.toggle > label::after {
+	content: "";
+	float: right;
+	margin: 15px 15px 0 0;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid #ccc;
+}
+.dropdown-petType ul {
+	list-style-type: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+	box-shadow: 0 6px 5px -5px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+}
+.dropdown-petType a,
+.dropdown-petType> label {
+	display: block;
+	padding: 0 0 0 10px;
+	text-decoration: none;
+	line-height: 40px;
+	/* font-size: 13px; */
+    font-size: 1rem;
+    font-weight: 400;
+	text-transform: uppercase;
+	/* font-weight: bold; */
+	color: #999;
+	background-color: #fff;
+}
+.dropdown-petType li {
+	height: 0;
+	overflow: hidden;
+	transition: all 500ms;
+}
+.dropdown-petType.hover li {
+	transition-delay: 300ms;
+}
+.dropdown-petType li:first-child a {
+	border-radius: 2px 2px 0 0;
+}
+.dropdown-petType li:last-child a {
+	border-radius: 0 0 2px 2px;
+}
+.dropdown-petType li:first-child a::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #fff;
+	margin: -10px 0 0 30px;
+}
+/* .dropdown-petType a:hover,
+.dropdown-petType.toggle > label:hover,
+.dropdown-petType.toggle > input:checked ~ label {
+	background-color: #eee;
+	color: #666;
+} */
+/* .dropdown-petType > a:hover::after,
+.dropdown-petType.toggle > label:hover::after,
+.dropdown-petType.toggle > input:checked ~ label::after {
+	border-top-color: #aaa;
+} */
+/* .dropdown-petType li:first-child a:hover::before {
+	border-bottom-color: #eee;
+} */
+
+.dropdown-petType.hover:hover li,
+.dropdown-petType.toggle > 
+
+t:checked ~ ul li {
+	height: 40px;
+}
+.dropdown-petType.hover:hover li:first-child{
+	padding-top: 15px;
+}
+
+
+
+/* .dropdown-petType {
     box-sizing: content-box;
     width: 200px;
     margin: 0;
@@ -74,7 +168,7 @@ main {
 .dropdown-petType > a, .dropdown-petType.toggle > label {
     border-radius: 5px;
     /*box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);*/
-    height: 35px;
+    /* height: 35px;
 }
 .dropdown-petType > a::after, .dropdown-petType.toggle > label::after {
     content: "";
@@ -100,11 +194,11 @@ main {
     display: block;
     padding: 0 0 0 10px;
     text-decoration: none;
-    line-height: 40px;
+    line-height: 40px; */
     /*font-size: 13px;*/
     /*text-transform: uppercase;*/
     /*font-weight: bold;*/
-    color: #999;
+    /* color: #999;
     background-color: #FFF;
 }
 .dropdown-petType li {
@@ -147,7 +241,7 @@ main {
 }
 .dropdown-petType.hover:hover li:first-child, .dropdown-petType.toggle > input:checked ~ ul li:first-child {
     padding-top: 15px;
-}
+} */
 
 
 /*#locationSearch{*/
@@ -159,11 +253,12 @@ main {
 .form-control.location{
     position: relative;
     display: block;
-    width: 200px;
+    width: 240px;
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
+    text-transform: uppercase;
     line-height: 1.5;
     color: #999;
     background-color: #fff;
