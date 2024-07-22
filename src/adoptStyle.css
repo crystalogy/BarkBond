@@ -7,31 +7,7 @@ html, body {
     flex-direction: column;
 }
 
-/* login and signup modal
 
-.modal-backdrop {
-    opacity: 0.20 !important;
-    z-index: 2;
-}
-
-.modal-content {
-    z-index: 3!important;
-}  */
-
-
-
-/*header {*/
-/*    height: 72px;*/
-/*    background-color: #343a40;*/
-/*    z-index: 1000;*/
-/*}*/
-
-/*footer {*/
-/*    height: 150px;*/
-/*    background-color: #eeebe6 !important;*/
-/*    z-index:1000;*/
-/*    !*overflow: hidden;*!*/
-/*}*/
 
 main {
     display: flex;
