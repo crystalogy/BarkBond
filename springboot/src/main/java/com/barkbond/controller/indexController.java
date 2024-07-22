@@ -1,10 +1,12 @@
 package com.barkbond.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+@Slf4j
 @Controller
 public class indexController {
 
@@ -16,7 +18,7 @@ public class indexController {
         // this function is for the home page of the website which is expressed as just a plain slash "/"
         ModelAndView response = new ModelAndView("index");
 
-        response.addObject("message", "Hello World!");
+//        response.addObject("message", "Hello World!");
 
         return response;
     }
