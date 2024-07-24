@@ -31,7 +31,7 @@ main {
     /*#504746*/
     height: 45px;
     width: 100%;
-    z-index: 2;
+    z-index: 1;
     align-content: center;
     padding-left: 300px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -40,20 +40,22 @@ main {
 .locationBarContainer {
     position: relative;
     height: 55px;
+    z-index: 1;
 }
 
-.locationBar {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    background-color: #ffdb6c;
-    height: 60px;
-    width: 100%;
-    z-index: 2;
-    padding-left: 300px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
+/*.locationBar {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: flex-start;*/
+/*    position: relative;*/
+/*    background-color: #ffdb6c;*/
+/*    height: 60px;*/
+/*    width: 100%;*/
+/*    z-index: 0;*/
+/*    padding-left: 300px;*/
+/*    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);*/
+
+/*}*/
 
 .dropdown-petType {
     width: 230px;

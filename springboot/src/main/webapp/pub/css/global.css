@@ -68,6 +68,7 @@ header {
     color: #a6959b;
 }
 
+
 .loginsign-btn-div {
     display: flex;
     align-items: center;
@@ -182,6 +183,9 @@ header {
         transform-origin: right;
         transition: transform 0.5s;
     }
+
+
+
 
     &:hover {
         color: #95a5a6;

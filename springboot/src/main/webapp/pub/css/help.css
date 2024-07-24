@@ -79,7 +79,7 @@ body {
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #28a745;
+    background-color: #ffbf5f;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -88,5 +88,14 @@ body {
 }
 
 .button:hover {
-    background-color: #218838;
+    background-color: #FFBF5FFF;
+}
+
+.post-image{
+    height: 200px;
+}
+
+.give-img {
+    object-fit: cover;
+    background-color: #fff; /* Ensures the padding area is white */
 }

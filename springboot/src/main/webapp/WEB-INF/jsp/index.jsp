@@ -16,13 +16,13 @@
 
             <div class="title">
                 <span class="block"></span>
-                <h1>Filling homes with happiness,<span></span></h1>
+                <h1 id="hero-phrase">Filling homes with happiness, one bond at a time<span></span></h1>
             </div>
 
-            <div class="role">
-                <div class="block"></div>
-                <p>one bond at a time</p>
-            </div>
+<%--            <div class="role">--%>
+<%--                <div class="block"></div>--%>
+<%--                <p>one bond at a time</p>--%>
+<%--            </div>--%>
 
         </div>
     </div>
