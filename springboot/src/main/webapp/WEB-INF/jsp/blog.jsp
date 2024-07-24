@@ -7,7 +7,7 @@
 
 <div class="band">
     <div class="item-1">
-        <a href="https://design.tutsplus.com/articles/international-artist-feature-malaysia--cms-26852" class="card">
+        <a href="/" class="card">
             <div class="thumb" style="background-image: url('${pageContext.request.contextPath}blog1.png');"></div>            <article>
                 <h1>The Importance of Spaying and Neutering</h1>
 <%--                <span>Crystal Ramos</span>--%>
@@ -15,7 +15,7 @@
         </a>
     </div>
     <div class="item-2">
-        <a href="https://webdesign.tutsplus.com/articles/how-to-conduct-remote-usability-testing--cms-27045" class="card">
+        <a href="/" class="card">
             <div class="thumb" style="background-image: url('${pageContext.request.contextPath}blog2.png');"></div>
             <article>
                 <h1>The Journey from Shelter to Home: What to Expect:</h1>
@@ -25,7 +25,7 @@
         </a>
     </div>
     <div class="item-3">
-        <a href="https://design.tutsplus.com/articles/envato-tuts-community-challenge-created-by-you-july-edition--cms-26724" class="card">
+        <a href="/" class="card">
             <div class="thumb" style="background-image: url('${pageContext.request.contextPath}blog3.png');"></div>
             <article>
                 <h1>Senior Pets: Why Adopting an Older Pet Can Be Rewarding:</h1>
@@ -35,7 +35,7 @@
         </a>
     </div>
     <div class="item-4">
-        <a href="https://webdesign.tutsplus.com/tutorials/how-to-code-a-scrolling-alien-lander-website--cms-26826" class="card">
+        <a href="/" class="card">
             <div class="thumb" style="background-image: url('${pageContext.request.contextPath}blog4.png');"></div>
             <article>
                 <h1>Recognizing and Preventing Pet Poisons:</h1>
@@ -45,7 +45,7 @@
         </a>
     </div>
     <div class="item-5">
-        <a href="https://design.tutsplus.com/tutorials/stranger-things-inspired-text-effect--cms-27139" class="card">
+        <a href="/" class="card">
             <div class="thumb" style="background-image: url('${pageContext.request.contextPath}blog5.png');"></div>
             <article>
                 <h1>The Importance of Dental Care for Pets:</h1>
@@ -55,7 +55,7 @@
         </a>
     </div>
     <div class="item-6">
-        <a href="https://photography.tutsplus.com/articles/5-inspirational-business-portraits-and-how-to-make-your-own--cms-27338" class="card">
+        <a href="/" class="card">
             <div class="thumb" style="background-image: url('${pageContext.request.contextPath}blog6.png');"></div>
             <article>
                 <h1>The Benefits of Microchipping Your Pet:</h1>
@@ -65,7 +65,7 @@
         </a>
     </div>
     <div class="item-7">
-        <a href="https://webdesign.tutsplus.com/articles/notes-from-behind-the-firewall-the-state-of-web-design-in-china--cms-22281" class="card">
+        <a href="/" class="card">
             <div class="thumb" style="background-image: url('${pageContext.request.contextPath}blog7.png');"></div>
             <article>
                 <h1>DIY Pet Treats: Healthy Recipes Your Pets Will Love:</h1>

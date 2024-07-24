@@ -10,17 +10,17 @@
     <div class="blog-posts">
         <div class="post">
             <div class="post-image">
-                <img src="${pageContext.request.contextPath}images/blog1.jpg" alt="Blog Post 1">
+                <img src="${pageContext.request.contextPath}donate.png" alt="Donate">
             </div>
             <div class="post-content">
                 <h2>Donate</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec venenatis odio.</p>
-                <a href="${pageContext.request.contextPath}blog/post1.jsp" class="button">Read More</a>
+                <a href="${pageContext.request.contextPath}post1.jsp" class="button">Read More</a>
             </div>
         </div>
         <div class="post">
             <div class="post-image">
-                <img src="${pageContext.request.contextPath}images/blog2.jpg" alt="Blog Post 2">
+                <img class="give-img" src="${pageContext.request.contextPath}volunteer.png" alt="Volunteer">
             </div>
             <div class="post-content">
                 <h2>Volunteer</h2>
@@ -30,7 +30,7 @@
         </div>
         <div class="post">
             <div class="post-image">
-                <img src="${pageContext.request.contextPath}images/blog3.jpg" alt="Blog Post 3">
+                <img src="${pageContext.request.contextPath}a1.png" alt="Foster">
             </div>
             <div class="post-content">
                 <h2>Foster</h2>
@@ -40,7 +40,7 @@
         </div>
         <div class="post">
             <div class="post-image">
-                <img src="${pageContext.request.contextPath}images/blog4.jpg" alt="Blog Post 4">
+                <img src="${pageContext.request.contextPath}adopt.png" alt="Adopt">
             </div>
             <div class="post-content">
                 <h2>Adopt</h2>
