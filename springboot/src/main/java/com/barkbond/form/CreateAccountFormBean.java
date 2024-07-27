@@ -1,4 +1,4 @@
-package com.barkbond.controller.form;
+package com.barkbond.form;
 
 import jakarta.validation.constraints.*;
 import lombok.*;
@@ -12,5 +12,8 @@ public class CreateAccountFormBean {
 
     @NotEmpty
     private String password;
+
+    @NotEmpty
+    private String fullName;
 
 }

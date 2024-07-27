@@ -26,6 +26,9 @@ public class User {
     @Column(name = "password")
     private String password;
 
+    @Column(name = "full_name", nullable = false)
+    private String fullName;
+
     @Column(name = "create_date")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createDate;
