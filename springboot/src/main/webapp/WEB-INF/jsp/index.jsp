@@ -12,6 +12,7 @@
 
 
 <div class="index-hero">
+    <div class="hero-container">
 
     <div class="phrase-container">
         <div class="box">
@@ -33,6 +34,7 @@
 <%--    <div id="phrase-container">--%>
 <%--    <h1 id="hero-phrase">Filling homes with happiness, one bond at a time.</h1>--%>
 <%--    </div>--%>
+
 
 <div class="index-img-container">
     <ul class="index-hero-ul">
@@ -62,11 +64,10 @@
             <%--        <!-- https://www.petfinder.com/cat/winky-48859782/nc/salisbury/faithful-friends-animal-sanctuary-nc519/ -->--%>
             <li><div class="image-container"><img class="hero-img-size-2" src="${pageContext.request.contextPath}petsIndex/hero4.png" alt="featured pet #1"><div class="feature-pet-name">Winky</div></div></li>
 
-
     </ul>
 </div>
 </div>
-
+</div>
 
 <%--<div class="searchbar">--%>
 <%--    <div class="dropdown">--%>
