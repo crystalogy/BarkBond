@@ -52,7 +52,7 @@ public class LoginController {
             // there were no errors, so we can create the new user in the database
             userService.createUser(form);
         }
-
+        response.setViewName("redirect:/account/create-account");
         return response;
     }
 
