@@ -14,9 +14,21 @@
 </div>
 
 <div class="about-content">
+<%--    <div class="image-section">--%>
+<%--        <img src="${pageContext.request.contextPath}IMG_1319.jpg" alt="Eevee" class="eevee-image">--%>
+<%--    </div>--%>
+
     <div class="image-section">
-        <img src="${pageContext.request.contextPath}IMG_1319.jpg" alt="Eevee" class="eevee-image">
+        <img id="dog-image" src="${pageContext.request.contextPath}/IMG_1319.jpg" usemap="#image-map" alt="Eevee" class="eevee-image">
+
+        <map name="image-map">
+            <!-- Adjust the coordinates to precisely cover the dog's nose -->
+            <area shape="circle" coords="802,1025,27" alt="Dog Nose" href="#" onclick="changeImage()">
+        </map>
     </div>
+
+
+
     <div class="text-section">
         <h2>Our Mission</h2>
         <p>I believe that every animal deserves a chance to be loved and cherished. Eevee's legacy lives on through every adoption and every pet whose life is changed for the better. I am committed to making a difference, one rescue pet at a time. Thank you for joining me in this mission and for helping me honor Eevee's memory. Together, we can create a brighter future for countless animals.</p>
@@ -24,6 +36,12 @@
 </div>
 
 
+
+<script>
+    function changeImage() {
+        document.getElementById('dog-image').src = '${pageContext.request.contextPath}/dogs.png';
+    }
+</script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
