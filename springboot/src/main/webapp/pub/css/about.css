@@ -39,7 +39,8 @@ body {
 
 .image-section {
     flex: 1;
-    min-width: 300px;
+    /*min-width: 300px;*/
+    width: auto;
     text-align: center;
 }
 

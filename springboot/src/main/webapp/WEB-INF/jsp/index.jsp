@@ -10,12 +10,12 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}pub/css/index.css">
 <%--<link rel="stylesheet" href="${pageContext.request.contextPath}pub/css/global.css">--%>
 
-
+<div class="page-container">
 <div class="index-hero">
-    <div class="hero-container">
 
     <div class="phrase-container">
         <div class="box">
+
 
             <div class="title">
                 <span class="block"></span>
@@ -35,7 +35,7 @@
 <%--    <h1 id="hero-phrase">Filling homes with happiness, one bond at a time.</h1>--%>
 <%--    </div>--%>
 
-
+    <div class="hero-container">
 <div class="index-img-container">
     <ul class="index-hero-ul">
         <%--        <!-- https://www.petfinder.com/dog/violet-22221612/mo/kansas-city/kc-pet-project-mo579/ -->--%>
@@ -68,6 +68,8 @@
 </div>
 </div>
 </div>
+</div>
+
 
 <%--<div class="searchbar">--%>
 <%--    <div class="dropdown">--%>
