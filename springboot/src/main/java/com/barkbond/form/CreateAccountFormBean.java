@@ -8,12 +8,17 @@ import lombok.*;
 public class CreateAccountFormBean {
 
     @NotEmpty
+    private String firstName;
+
+    @NotEmpty
+    private String lastName;
+
+//    @NotEmpty
+//    private String userName;
+
+    @NotEmpty
     private String email;
 
     @NotEmpty
     private String password;
-
-    @NotEmpty
-    private String fullName;
-
 }
