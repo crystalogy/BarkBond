@@ -21,11 +21,11 @@ public class UserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public User createUser(@NotNull CreateAccountFormBean form) {
+    public User createUser( CreateAccountFormBean form) {
         // there were no errors, so we can create the new user in the database
         User user = new User();
 
-        user.setEmail(form.getEmail());
+        user.setEmail(form.getUsername());
 
         // we are getting a plain text password because the user entered it into the form
 //        user.setPassword(form.getPassword());

@@ -3,15 +3,12 @@ package com.barkbond.security;
 import com.barkbond.database.dao.*;
 import com.barkbond.database.entity.User;
 import com.barkbond.database.entity.*;
-import lombok.*;
 import lombok.extern.slf4j.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.security.core.*;
 import org.springframework.security.core.authority.*;
 import org.springframework.security.core.userdetails.*;
 import org.springframework.stereotype.*;
-
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.*;
 

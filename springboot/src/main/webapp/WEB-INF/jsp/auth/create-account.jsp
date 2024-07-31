@@ -201,8 +201,13 @@
 <!-- Container for Sign In/Sign Up -->
 <div class="container" id="container">
     <div class="form-container sign-up-container">
-        <form action="${pageContext.request.contextPath}/auth/create-account" method="post">
-            <h1>Create Account</h1>
+        <h1>Create Account</h1>
+
+        <form action="${pageContext.request.contextPath}/account/loginProcessingURL" method="post">
+
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+
+
             <input type="text" placeholder="First Name" name="firstName" class="<c:if test="${bindingResult.hasFieldErrors('firstName')}">is-invalid</c:if>" value="${form.firstName}" />
             <c:if test="${bindingResult.hasFieldErrors('firstName')}">
                 <div class="text-danger">
@@ -219,7 +224,7 @@
                     </c:forEach>
                 </div>
             </c:if>
-            <input type="email" placeholder="Email" name="email" class="<c:if test="${bindingResult.hasFieldErrors('email')}">is-invalid</c:if>" value="${form.email}" />
+            <input type="email" placeholder="Email" name="username" class="<c:if test="${bindingResult.hasFieldErrors('email')}">is-invalid</c:if>" value="${form.email}" />
             <c:if test="${bindingResult.hasFieldErrors('email')}">
                 <div class="text-danger">
                     <c:forEach items="${bindingResult.getFieldErrors('email')}" var="error">
@@ -235,23 +240,26 @@
                     </c:forEach>
                 </div>
             </c:if>
-            <button>Sign Up</button>
+            <button type="submit">Sign Up</button>
         </form>
     </div>
     <div class="form-container sign-in-container">
-        <form action="${pageContext.request.contextPath}/account/login" method="post">
-            <h1>Sign in</h1>
-            <input type="email" placeholder="Email" name="email" />
+        <h1>Sign in</h1>
+        <form action="${pageContext.request.contextPath}/account/loginProcessingURL" method="post">
+
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+<%--            <h1>Sign in</h1>--%>
+            <input type="email" placeholder="Email" name="username" />
             <input type="password" placeholder="Password" name="password" />
             <a href="#">Forgot your password?</a>
-            <button>Sign In</button>
+            <button type="submit">Sign In</button>
         </form>
     </div>
     <div class="overlay-container">
         <div class="overlay">
             <div class="overlay-panel overlay-left">
                 <h1>Hello, Friend!</h1>
-                <p>To keep connected with us please login with your personal info</p>
+                <p>To keep connected with us please log in with your personal info</p>
                 <button class="ghost" id="signIn">Sign In</button>
             </div>
             <div class="overlay-panel overlay-right">
