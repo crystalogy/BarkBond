@@ -2,11 +2,19 @@ package com.barkbond.config;
 
 
 import org.springframework.context.annotation.*;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.config.annotation.method.configuration.*;
 import org.springframework.security.config.annotation.web.builders.*;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.crypto.bcrypt.*;
 import org.springframework.security.crypto.password.*;
 import org.springframework.security.web.*;
 import org.springframework.security.web.util.matcher.*;
+
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 
 @Configuration
 public class SpringSecurity {
@@ -16,6 +24,7 @@ public class SpringSecurity {
 
         // boilerplate code to protect a common hack
         http.csrf(csrf -> csrf.disable());
+//        http.csrf(csrf -> Customizer.withDefaults());
 
         // this section says allow all pages EXCEPT the ones that are in the AntPathRequestMatcher
         // anything in AntPathRequestMatcher will require the user to be authenticated
@@ -40,9 +49,10 @@ public class SpringSecurity {
                 // 2) input field for username needs to be named "username"
                 // 3) input field for password needs to be named "password"
 
-                //  .loginProcessingUrl("/account/loginProcessingURL"));
+                  .loginProcessingUrl("/account/loginProcessingURL"));
+//                .successForwardUrl("/user/dashboard"));
                 // we build this controller method, however this is just the URL in the browser for the login page
-                .loginProcessingUrl("/account/login"));
+//                .loginProcessingUrl("/account/login"));
 
         // this is the URL that will log a user out
         http.logout(formLogout -> formLogout
@@ -56,6 +66,11 @@ public class SpringSecurity {
 
 
         return http.build();
+    }
+
+    @Bean
+    AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
+        return authenticationConfiguration.getAuthenticationManager();
     }
 
     @Bean(name = "passwordEncoder")

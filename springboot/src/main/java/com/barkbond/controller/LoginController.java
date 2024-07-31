@@ -3,6 +3,7 @@ package com.barkbond.controller;
 import com.barkbond.database.dao.*;
 import com.barkbond.database.entity.*;
 import com.barkbond.form.*;
+import com.barkbond.security.AuthenticatedUserUtilities;
 import com.barkbond.service.UserService;
 import jakarta.validation.*;
 import lombok.extern.slf4j.*;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.*;
 import org.springframework.validation.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.*;
+import jakarta.servlet.http.HttpSession;
 
 import java.util.*;
 
@@ -25,7 +27,8 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
-
+    @Autowired
+    private AuthenticatedUserUtilities authenticatedUserUtilities;
 
     @GetMapping("/create-account")
     public ModelAndView createAccount() {
@@ -35,8 +38,8 @@ public class LoginController {
     }
 
     @PostMapping("/create-account")
-    public ModelAndView createAccountSubmit(@Valid CreateAccountFormBean form, BindingResult bindingResult) {
-        ModelAndView response = new ModelAndView("auth/create-account");
+    public ModelAndView createAccountSubmit(@Valid CreateAccountFormBean form, BindingResult bindingResult, HttpSession session) {
+        ModelAndView response = new ModelAndView();
 
         // homework if you want - check to make sure the email does not already exist
         // this is a great case the custom annotation that we made
@@ -51,8 +54,11 @@ public class LoginController {
         } else {
             // there were no errors, so we can create the new user in the database
             userService.createUser(form);
+
+//            userService.assignUserRole(form);
+            authenticatedUserUtilities.manualAuthentication(session, form.getUsername(), form.getPassword());
         }
-        response.setViewName("redirect:/account/create-account");
+        response.setViewName("redirect:/");
         return response;
     }
 
