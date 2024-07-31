@@ -1,4 +1,4 @@
-package com.barkbond.controller.database.dao;
+package com.barkbond.database.dao;
 
 public interface OrderDAO {
 }
