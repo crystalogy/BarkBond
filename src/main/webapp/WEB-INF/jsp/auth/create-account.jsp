@@ -203,7 +203,7 @@
     <div class="form-container sign-up-container">
 <%--        <h1>Create Account</h1>--%>
 
-        <form action="${pageContext.request.contextPath}/account/loginProcessingURL" method="post">
+        <form action="${pageContext.request.contextPath}/account/create-account" method="post">
 
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             <h1>Create Account</h1>
@@ -233,7 +233,7 @@
                     </c:forEach>
                 </div>
             </c:if>
-            <input type="email" placeholder="Email" name="username" class="<c:if test="${bindingResult.hasFieldErrors('email')}">is-invalid</c:if>" value="${form.email}" />
+            <input type="email" placeholder="Email" name="username" class="<c:if test="${bindingResult.hasFieldErrors('email')}">is-invalid</c:if>" value="${form.username}" />
             <c:if test="${bindingResult.hasFieldErrors('email')}">
                 <div class="text-danger">
                     <c:forEach items="${bindingResult.getFieldErrors('email')}" var="error">

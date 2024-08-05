@@ -61,6 +61,21 @@ public class LoginController {
         response.setViewName("redirect:/");
         return response;
     }
+    @PostMapping("/success")
+    ModelAndView loginSuccess() {
+        ModelAndView response = new ModelAndView();
+        User user = authenticatedUserUtilities.getCurrentUserObject();
+        if(authenticatedUserUtilities.isUserInRole("ADMIN")){
+            // where to send admin after login
+            response = new ModelAndView("redirect:http://localhost:8080/admin/dashboard");
 
+        }
+        if(!authenticatedUserUtilities.isUserInRole("ADMIN")){
+            //where to send user (non-admin) after login
+            response.setViewName("redirect:http://localhost:8080/users/dashboard");
+        }
+        response.addObject("user", user);
+        return response;
+    }
 
 }

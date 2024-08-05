@@ -49,8 +49,8 @@ public class SpringSecurity {
                 // 2) input field for username needs to be named "username"
                 // 3) input field for password needs to be named "password"
 
-                  .loginProcessingUrl("/account/loginProcessingURL"));
-//                .successForwardUrl("/user/dashboard"));
+                  .loginProcessingUrl("/account/loginProcessingURL")
+                .successForwardUrl("/account/success"));
                 // we build this controller method, however this is just the URL in the browser for the login page
 //                .loginProcessingUrl("/account/login"));
 
