@@ -17,10 +17,10 @@ main {
     width: 100%;
 }
 
-.locationBarContainer{
-    position: relative;
-    height: 45px;
-}
+/*.locationBarContainer{*/
+/*    position: relative;*/
+/*    height: 45px;*/
+/*}*/
 
 .locationBar {
     display: flex; /* This makes the location bar a flex container */
@@ -29,18 +29,27 @@ main {
     position: relative;
     background-color: #ffdb6c;
     /*#504746*/
-    height: 45px;
+    height: 55px;
     width: 100%;
     z-index: 1;
     align-content: center;
-    padding-left: 300px;
+    padding-left: 380px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
 }
 
 .locationBarContainer {
     position: relative;
     height: 55px;
     z-index: 1;
+}
+
+.location-search{
+    width: 25%;
+}
+
+.dropdown-pet-type{
+    margin-right: 12px;
 }
 
 /*.locationBar {*/
@@ -176,11 +185,27 @@ main {
     row-gap: 50px;
 }
 
+/*.card-outline{*/
+/*    width: 200px;*/
+/*    height: 280px;*/
+/*    border-radius: 5%;*/
+/*}*/
+
+
 .card {
     width: 200px;
     height: 280px;
     box-sizing: border-box;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover{
+    /*outline: 2px solid #0cbfde;*/
+    /*outline-offset: 6px;*/
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 24px 0 rgba(0, 0, 0, 0.35);
 }
 
 .cardImg{
@@ -192,14 +217,6 @@ main {
 .cardTextContainer{
     padding-left: 3px;
     padding-right: 3px;
-}
-
-
-.card:hover{
-    outline: 2px solid #ffffff;
-    outline-offset: 6px;
-
-
 }
 
 /*---------Next Page Number Bar (pagination)---------*/

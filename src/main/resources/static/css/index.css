@@ -897,7 +897,7 @@ ul {
 
 
 .search-container{
-    background-image: url('/index-search-bg.png');
+    background-image: url('../images/index-search-bg.png');
     background-position: center; /* Adjusted to show more of the bottom of the image */
     background-repeat: no-repeat;
     background-size: cover;
@@ -913,9 +913,6 @@ ul {
     display: flex;
     align-items: center;
 }
-
-
-
 
 .search-box.search-row {
     display: flex;
