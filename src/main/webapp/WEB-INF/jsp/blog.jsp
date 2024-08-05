@@ -2,7 +2,7 @@
 <jsp:include page="include/navbar.jsp" />
 
 
-<link rel="stylesheet" href="${pageContext.request.contextPath}pub/css/blog.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}\css\blog.css">
 
 
 <div class="band">
