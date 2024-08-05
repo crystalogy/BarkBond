@@ -196,17 +196,26 @@
 
 <!-- External Resources -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/pub/css/account.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}\css\account.css">
 
 <!-- Container for Sign In/Sign Up -->
 <div class="container" id="container">
     <div class="form-container sign-up-container">
-        <h1>Create Account</h1>
+<%--        <h1>Create Account</h1>--%>
 
         <form action="${pageContext.request.contextPath}/account/loginProcessingURL" method="post">
 
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+            <h1>Create Account</h1>
 
+<%--            <input type="email" placeholder="Username" name="username" class="<c:if test="${bindingResult.hasFieldErrors('username')}">is-invalid</c:if>" value="${form.userName}" />--%>
+<%--            <c:if test="${bindingResult.hasFieldErrors('username')}">--%>
+<%--                <div class="text-danger">--%>
+<%--                    <c:forEach items="${bindingResult.getFieldErrors('email')}" var="error">--%>
+<%--                        ${error.defaultMessage}<br>--%>
+<%--                    </c:forEach>--%>
+<%--                </div>--%>
+<%--            </c:if>--%>
 
             <input type="text" placeholder="First Name" name="firstName" class="<c:if test="${bindingResult.hasFieldErrors('firstName')}">is-invalid</c:if>" value="${form.firstName}" />
             <c:if test="${bindingResult.hasFieldErrors('firstName')}">
@@ -244,11 +253,11 @@
         </form>
     </div>
     <div class="form-container sign-in-container">
-        <h1>Sign in</h1>
+<%--        <h1>Sign in</h1>--%>
         <form action="${pageContext.request.contextPath}/account/loginProcessingURL" method="post">
 
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-<%--            <h1>Sign in</h1>--%>
+            <h1>Sign in</h1>
             <input type="email" placeholder="Email" name="username" />
             <input type="password" placeholder="Password" name="password" />
             <a href="#">Forgot your password?</a>
