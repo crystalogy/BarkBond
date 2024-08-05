@@ -2,7 +2,7 @@
 <jsp:include page="include/navbar.jsp" />
 
 
-<link rel="stylesheet" href="${pageContext.request.contextPath}pub/css/help.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}\css\help.css">
 
 
 <div class="blog-page">
