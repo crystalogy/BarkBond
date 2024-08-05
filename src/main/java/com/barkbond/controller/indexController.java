@@ -13,6 +13,18 @@ public class indexController {
 //    @Autowired
 //    private ProductDAO productDAO;
 
+
+
+//    @GetMapping("/")
+//    public ModelAndView index() {
+//        // this function is for the home page of the website which is expressed as just a plain slash "/"
+//        ModelAndView response = new ModelAndView("index");
+//
+////        response.addObject("message", "Hello World!");
+//
+//        return response;
+//    }
+
     @GetMapping("/")
     public ModelAndView index() {
         // this function is for the home page of the website which is expressed as just a plain slash "/"
