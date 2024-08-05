@@ -1,7 +1,7 @@
 <jsp:include page="include/header.jsp" />
 <jsp:include page="include/navbar.jsp" />
 
-<link rel="stylesheet" href="${pageContext.request.contextPath}pub/css/resourcesStyles.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}\css\resourcesStyles.css">
 
 
 <%--<div class="accordion-container">--%>
@@ -106,8 +106,8 @@
                     <h3>National Programs for Pet Financial Aid</h3>
                     <ul>
                         <li><a href="https://redrover.org/" target="_blank" rel="nofollow">RedRover</a></li>
-                        <li><a href="http://thepetfund.com/" target="_blank" rel="nofollow">The Pet Fund</a></li>
-                        <li><a href="http://www.paws4acure.org/askforhelp.php" target="_blank" rel="nofollow">Paws 4 A Cure</a></li>
+                        <li><a href="https://thepetfund.com/" target="_blank" rel="nofollow">The Pet Fund</a></li>
+                        <li><a href="https://www.paws4acure.org/askforhelp.php" target="_blank" rel="nofollow">Paws 4 A Cure</a></li>
                         <li><a href="https://petnewsdaily.com/financial-assistance/" target="_blank" rel="nofollow">Pet Lifeline Program</a></li>
                     </ul>
                     <h3>State Programs for Help with Vet Bills</h3>
@@ -164,7 +164,7 @@
                 <div class="accordion-body">
                     <ul>
                         <li><a href="https://iaadp.org/" target="_blank" rel="nofollow">International Association of Assistance Dog Partners</a></li>
-                        <li><a href="http://www.cdss.ca.gov/Assistance-Dogs" target="_blank" rel="nofollow">California Assistance Dog Special Allowance Program</a></li>
+                        <li><a href="https://www.cdss.ca.gov/Assistance-Dogs" target="_blank" rel="nofollow">California Assistance Dog Special Allowance Program</a></li>
                     </ul>
                 </div>
             </div>
