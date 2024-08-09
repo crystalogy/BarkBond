@@ -19,6 +19,9 @@ public class UserService {
     private UserDAO userDao;
 
     @Autowired
+    private UserRoleDAO userRoleDao;
+
+    @Autowired
     private PasswordEncoder passwordEncoder;
 
     public User createUser( CreateAccountFormBean form) {
@@ -39,6 +42,38 @@ public class UserService {
         userDao.save(user);
 
         return user;
+    }
+
+    public List<User> getAllUsers() {
+        return userDao.findAll();
+    }
+
+    public User findByFirstName(String firstName) {
+        return userDao.findByFirstName(firstName);
+    }
+
+
+    public UserRole assignUserRole(CreateAccountFormBean form) {
+        User user = userDao.findByEmailIgnoreCase(form.getUsername());
+        String role = form.getRole();
+        if(role == null) {
+            role = "USER";
+        }
+        List<UserRole> usersRole = userRoleDao.findByUserId(user.getId());
+        UserRole assignedUserRole = new UserRole();
+        if(usersRole.isEmpty()) {
+            assignedUserRole.setUserId(user.getId());
+            assignedUserRole.setRoleName(role);
+            assignedUserRole.setCreateDate(new Date());
+            userRoleDao.save(assignedUserRole);
+        }
+        for(UserRole userRole : usersRole) {
+            if(userRole.getRoleName().equals(role)) {
+                break;
+            }
+            userRole.setRoleName(role);
+        }
+        return assignedUserRole;
     }
 
 }
