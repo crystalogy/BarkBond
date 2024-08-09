@@ -56,7 +56,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
                 accountNonLocked,
                 authorities); // this is the list of security roles that the user is Authorized to have
 
-
         return userDetails;
     }
 

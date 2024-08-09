@@ -1,18 +1,27 @@
 package com.barkbond.controller;
 
+import org.springframework.ui.Model;
 import com.barkbond.database.dao.*;
 import com.barkbond.database.entity.*;
 import com.barkbond.form.*;
 import com.barkbond.security.AuthenticatedUserUtilities;
-import com.barkbond.service.UserService;
+import com.barkbond.service.*;
 import jakarta.validation.*;
 import lombok.extern.slf4j.*;
 import org.springframework.beans.factory.annotation.*;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.*;
 import org.springframework.validation.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.*;
 import jakarta.servlet.http.HttpSession;
+import org.springframework.security.core.Authentication;
 
 import java.util.*;
 
@@ -20,6 +29,16 @@ import java.util.*;
 @Controller
 @RequestMapping("/account")
 public class LoginController {
+
+
+
+    @Autowired
+    private AuthenticationManager authenticationManager;
+
+    @Autowired
+    private UserDetailsService userDetailsService;
+
+
 
     @Autowired
     private UserDAO userDao;
@@ -67,15 +86,46 @@ public class LoginController {
         User user = authenticatedUserUtilities.getCurrentUserObject();
         if(authenticatedUserUtilities.isUserInRole("ADMIN")){
             // where to send admin after login
-            response = new ModelAndView("redirect:http://localhost:8080/admin/dashboard");
+            response = new ModelAndView("redirect:/");
 
         }
         if(!authenticatedUserUtilities.isUserInRole("ADMIN")){
             //where to send user (non-admin) after login
-            response.setViewName("redirect:http://localhost:8080/users/dashboard");
+            response.setViewName("redirect:/");
         }
         response.addObject("user", user);
         return response;
     }
 
+
+
+
+    @GetMapping("/login")
+    public String showLoginPage(Model model) {
+        return "login"; // Assuming you have a login view
+    }
+
+
+    @PostMapping("/login")
+    public String handleLogin(@RequestParam String username, @RequestParam String password, Model model, HttpSession session) {
+        try {
+            Authentication authentication = authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(username, password));
+            SecurityContextHolder.getContext().setAuthentication(authentication);
+
+            // Retrieve the user details
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+            User user = (User) userDetails;
+
+            // Set the user's first name in the model
+            model.addAttribute("User", user);
+
+            // Redirect to the home page or wherever you want to go after login
+            return "redirect:/home";
+        } catch (BadCredentialsException e) {
+            model.addAttribute("error", "Invalid username or password.");
+            return "login";
+        }
+    }
 }
+
