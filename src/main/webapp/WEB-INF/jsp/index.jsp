@@ -52,7 +52,7 @@
         <li><div class="image-container"><img class="hero-img-size-4" src="${pageContext.request.contextPath}images/hero6.png" alt="featured pet #1"><div class="feature-pet-name">Dani</div></div></li>
         <%--        <!-- https://spcawake.org/adopt/pet-details/?aid=103540&cid=24&tid=Dog -->--%>
 <%--            https://www.petfinder.com/dog/luka-69987095/nc/raleigh/spca-of-wake-county-nc590/--%>
-        <li><div class="image-container"><img class="hero-img-size-5" src="${pageContext.request.contextPath}images/hero7.png" alt="featured pet #1"><div class="feature-pet-name">Luka</div></div></li>
+<%--        <li><div class="image-container"><img class="hero-img-size-5" src="${pageContext.request.contextPath}images/hero7.png" alt="featured pet #1"><div class="feature-pet-name">Luka</div></div></li>--%>
         <%--        <!-- https://www.petfinder.com/cat/buddy-has-a-maine-coon-personality-50640969/ca/newport-beach/animal-network-of-orange-county-ca956/ -->--%>
         <li><div class="image-container"><img class="hero-img-size-6" src="${pageContext.request.contextPath}images/hero8.png" alt="featured pet #1"><div class="feature-pet-name">Buddy</div></div></li>
             <%--        <!-- https://www.petfinder.com/dog/luna-72475699/nc/lexington/friends-in-need-animal-rescue-inc-nc648/ -->--%>

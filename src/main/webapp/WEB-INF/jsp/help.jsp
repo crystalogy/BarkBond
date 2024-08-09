@@ -10,37 +10,37 @@
     <div class="blog-posts">
         <div class="post">
             <div class="post-image">
-                <img src="${pageContext.request.contextPath}donate.png" alt="Donate">
+                <img src="${pageContext.request.contextPath}images/donate.png" alt="Donate">
             </div>
             <div class="post-content">
                 <h2>Donate</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec venenatis odio.</p>
-                <a href="${pageContext.request.contextPath}post1.jsp" class="button">Read More</a>
+                <a href="${pageContext.request.contextPath}images/post1.jsp" class="button">Read More</a>
             </div>
         </div>
         <div class="post">
             <div class="post-image">
-                <img class="give-img" src="${pageContext.request.contextPath}volunteer.png" alt="Volunteer">
+                <img class="give-img" src="${pageContext.request.contextPath}images/volunteer.png" alt="Volunteer">
             </div>
             <div class="post-content">
                 <h2>Volunteer</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec venenatis odio.</p>
-                <a href="${pageContext.request.contextPath}blog/post2.jsp" class="button">Read More</a>
+                <a href="${pageContext.request.contextPath}images/post2.jsp" class="button">Read More</a>
             </div>
         </div>
         <div class="post">
             <div class="post-image">
-                <img src="${pageContext.request.contextPath}a1.png" alt="Foster">
+                <img src="${pageContext.request.contextPath}images/a1.png" alt="Foster">
             </div>
             <div class="post-content">
                 <h2>Foster</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec venenatis odio.</p>
-                <a href="${pageContext.request.contextPath}blog/post3.jsp" class="button">Read More</a>
+                <a href="${pageContext.request.contextPath}images/post3.jsp" class="button">Read More</a>
             </div>
         </div>
         <div class="post">
             <div class="post-image">
-                <img src="${pageContext.request.contextPath}adopt.png" alt="Adopt">
+                <img src="${pageContext.request.contextPath}images/adopt.png" alt="Adopt">
             </div>
             <div class="post-content">
                 <h2>Adopt</h2>
