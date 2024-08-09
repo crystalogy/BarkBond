@@ -192,6 +192,7 @@
 
 <!-- src/main/webapp/WEB-INF/jsp/auth/create-account.jsp -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <jsp:include page="../include/header.jsp" />
 
 <!-- External Resources -->
@@ -233,6 +234,18 @@
                     </c:forEach>
                 </div>
             </c:if>
+
+            <sec:authorize access="hasAuthority('ADMIN')">
+<%--                <div class="col col-2 form-check">--%>
+                    <label class="form-check-label" for="role">
+                        Admin:
+                    </label>
+                    <input name="role" class="form-check-input" type="checkbox" value="ADMIN" id="role"
+<%--                           <c:if test="${roles.contains('ADMIN')}">checked</c:if> >--%>
+<%--                </div>--%>
+            </sec:authorize>
+
+
             <input type="email" placeholder="Email" name="username" class="<c:if test="${bindingResult.hasFieldErrors('email')}">is-invalid</c:if>" value="${form.username}" />
             <c:if test="${bindingResult.hasFieldErrors('email')}">
                 <div class="text-danger">

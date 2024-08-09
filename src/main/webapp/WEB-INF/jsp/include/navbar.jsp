@@ -131,7 +131,7 @@
                 <ul class="menuItems">
                     <li><a href="${pageContext.request.contextPath}/">Home</a></li>
                     <li><a href="${pageContext.request.contextPath}/about">About</a></li>
-                    <li><a href="${pageContext.request.contextPath}/adopt">Adopt</a></li>
+                    <li><a href="${pageContext.request.contextPath}/adopt/animals">Adopt</a></li>
                     <li><a href="${pageContext.request.contextPath}/resources">Resources</a></li>
                     <li><a href="${pageContext.request.contextPath}/blog">Blog</a></li>
                     <li><a href="${pageContext.request.contextPath}/help">Ways to give</a></li>
