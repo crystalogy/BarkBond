@@ -6,3 +6,19 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+#Other files
+.env
+/_app.js
+/petfinder-OAuth-Token.js
+/server.js
+/index.js
+/AnimalCard.js
+/ResultPane.js
+/package-lock.json
+/package.json
+/process.env
+.xml
+/node_modules
+/@babel
+@mui
+/runtime

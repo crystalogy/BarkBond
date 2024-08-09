@@ -31,3 +31,12 @@ build/
 
 ### VS Code ###
 .vscode/
+node_modules
+src/main/resources/static/js/index.js
+src/main/resources/static/js/ResultPane.js
+src/main/resources/static/js/server.js
+src/main/resources/static/js/_app.js
+src/main/resources/static/js/AnimalCard.js
+src/main/webapp/WEB-INF/jsp/auth/petfinder-OAuth-Token.js
+src/main/java/com/barkbond/model/Pet.java
+*.env
