@@ -5,11 +5,13 @@
 <jsp:include page="include/navbar.jsp" />
 
 <link rel="stylesheet" href="${pageContext.request.contextPath}css/adopt.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}css/adoptStyle.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}js/card.js">
 
 <div class="locationBarContainer">
     <div class="locationBar">
         <div class="md-12 mt-12 dropdown-pet-type">
-            <select class="form-select border-0">
+            <select class="form-select border-0">f
                 <option selected="">Dogs</option>
                 <option value="1">Cats</option>
                 <option value="2">Birds</option>
@@ -20,9 +22,9 @@
             </select>
         </div>
         <div class="md-12 mt-12 location-search">
-        <input type="text" class="form-control border-0" placeholder="Location">
+            <input type="text" class="form-control border-0" placeholder="Location">
         </div>
-<%--        <input class="form-control location" type="text" placeholder="Enter City, State, or ZIP" aria-label="default input example">--%>
+        <%--        <input class="form-control location" type="text" placeholder="Enter City, State, or ZIP" aria-label="default input example">--%>
 
 
         <div class="md-12 mt-12 filters-dropdown">
@@ -34,25 +36,24 @@
             </button>
 
             <div class="dropdown-menu p-4" aria-labelledby="dropdownMenuButton">
-<%--                <label for="move-in-date">Move-In Date:</label>--%>
-<%--                <input type="date" id="move-in-date" name="move-in-date" class="form-control mb-3">--%>
 
-    <label for="age">Age:</label>
-    <select id="age" name="age" class="form-control mb-3">
-        <option value="puppy">All</option>
-        <option value="puppy">Puppy</option>
-        <option value="young">Young</option>
-        <option value="adult">Adult</option>
-        <option value="senior">Senior</option>
-    </select>
 
-    <label for="age">Size:</label>
-    <select id="age" name="age" class="form-control mb-3">
-        <option value="puppy">Small</option>
-        <option value="puppy">Medium</option>
-        <option value="young">Large</option>
-        <option value="adult">Extra Large</option>
-    </select>
+                <label for="age">Age:</label>
+                <select id="age" name="age" class="form-control mb-3">
+                    <option value="puppy">All</option>
+                    <option value="puppy">Puppy</option>
+                    <option value="young">Young</option>
+                    <option value="adult">Adult</option>
+                    <option value="senior">Senior</option>
+                </select>
+
+                <label for="age">Size:</label>
+                <select id="age" name="age" class="form-control mb-3">
+                    <option value="puppy">Small</option>
+                    <option value="puppy">Medium</option>
+                    <option value="young">Large</option>
+                    <option value="adult">Extra Large</option>
+                </select>
 
 
                 <div class="form-check mb-2">
@@ -65,7 +66,7 @@
             </div>
         </div>
 
-<%--        <a href="${pageContext.request.contextPath}/account/create-account?view=signin" class="btn btn-outline-secondary btn-sm login-btn" id="login-header">More</a>--%>
+        <%--        <a href="${pageContext.request.contextPath}/account/create-account?view=signin" class="btn btn-outline-secondary btn-sm login-btn" id="login-header">More</a>--%>
 
 
     </div>
@@ -79,10 +80,9 @@
     </div>
 </div>
 
-<link rel="stylesheet" href="${pageContext.request.contextPath}css/adoptStyle.css">
 
-<link rel="stylesheet" href="${pageContext.request.contextPath}css/adopt.css">
-<%--<script src="${pageContext.request.contextPath}js/card.js"></script>--%>
+
+<script src="${pageContext.request.contextPath}js/card.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
