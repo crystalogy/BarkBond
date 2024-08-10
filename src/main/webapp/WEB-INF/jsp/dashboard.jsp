@@ -5,14 +5,16 @@
 
 <link rel="stylesheet" href="${pageContext.request.contextPath}/pub/css/dashboard.css">
 
+
 <main class="main">
-    <div class="responsive-wrapper">
-        <div class="content">
-            <div class="content-panel">
-                <div class="vertical-tabs">
-                    <a href="${pageContext.request.contextPath}/dashboard">Animals</a>
-                    <a href="${pageContext.request.contextPath}/dashboard">Adopters</a>
-                    <a href="${pageContext.request.contextPath}/dashboard">Organizations</a>
+
+    <div class="dashboard-panel-responsive-wrapper">
+        <div class="dashboard-panel-content">
+            <div class="dashboard-content-panel">
+                <div class="dashboard-panel-vertical-tabs">
+                    <a class="dashboard-panel-item" href="${pageContext.request.contextPath}/dashboard">Animals</a>
+                    <a class="dashboard-panel-item"  href="${pageContext.request.contextPath}/dashboard">Users</a>
+                    <a class="dashboard-panel-item"  href="${pageContext.request.contextPath}/dashboard">Organizations</a>
                 </div>
             </div>
             <div class="content-main">
@@ -26,15 +28,15 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const tabs = document.querySelectorAll('.vertical-tabs a');
+    const tabs = document.querySelectorAll('.dashboard-panel-vertical-tabs a');
     const contentMain = document.querySelector('.content-main');
 
     const tabContent = {
         'Animals': `
 
-<button id="addRowButton" class="btn btn-primary">Add Row</button>
+<button id="addRowButton" class="btn btn-primary dashboard-btn">Add Row</button>
 
-<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+<table id="dashboard-table" class="table table-striped table-bordered" cellspacing="0" width="100%">
 	<thead>
 		<tr>
 			<th>ID</th>
@@ -88,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default dashboard-btn" data-dismiss="modal">Close</button>
       </div>
     </div>
 
@@ -96,10 +98,10 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
         `,
-        'Adopters': `
+        'Users': `
 
 
-<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+<table id="dashboard-table" class="table table-striped table-bordered" cellspacing="0" width="100%">
 	<thead>
 		<tr>
 			<th>ID</th>
@@ -131,14 +133,14 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <button type="button" class="close dashboard-btn" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Row information</h4>
       </div>
       <div class="modal-body">
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default dashboard-btn" data-dismiss="modal">Close</button>
       </div>
     </div>
 
@@ -149,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         'Organizations': `
 
-     <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+     <table id="dashboard-table" class="table table-striped table-bordered" cellspacing="0" width="100%">
 	<thead>
 		<tr>
 			<th>ID</th>
@@ -177,14 +179,14 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <button type="button" class="close dashboard-btn" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Row information</h4>
       </div>
       <div class="modal-body">
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default dashboard-btn" data-dismiss="modal">Close</button>
       </div>
     </div>
 
@@ -192,9 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 
-        `
-
-    };
+        `    };
 
     tabs.forEach(tab => {
         tab.addEventListener('click', function(event) {
@@ -211,11 +211,6 @@ document.addEventListener('DOMContentLoaded', function() {
         tabs[0].click();
     }
 });
-
-
-
-
-
 
 </script>
 
