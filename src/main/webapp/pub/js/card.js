@@ -10,7 +10,7 @@
 //         htmlContent += `
 //             <div class="card-outline">
 //                 <div class="card">
-//                     <img class="cardImg" src="${animal.photoUrl}" alt="adoptable pet image">
+//                     <img class="cardImg" src="{pageContext.request.contextPath}${animal.photoUrl}" alt="adoptable pet image">
 //                     <div class="cardTextContainer">
 //                         <h4><b>${animal.name}</b></h4>
 //                         <p>${animal.breed}</p>
@@ -31,25 +31,25 @@
 //
 //
 //
-// // window.addEventListener('load', function() {
-// //     let htmlContent = '';
-// //
-// //     for(let i = 0; i < 12; i++) {
-// //         htmlContent += `
-// //         <div class="card-outline">
-// //             <div class="card">
-// //                 <img class="cardImg" src="` + contextPath + `/images/dogTestImg.jpg" alt="adoptable pet image">
-// //                     <div class="cardTextContainer">
-// //                         <h4><b>Dog Doe</b></h4>
-// //                         <p>Golden Retriever</p>
-// //                     </div>
-// //             </div>
-// //         </div>
-// //             `;
-// //     }
-// //     document.getElementById('cards').innerHTML += htmlContent;
-// //
-// // });
+// window.addEventListener('load', function() {
+//     let htmlContent = '';
+//
+//     for(let i = 0; i < 12; i++) {
+//         htmlContent += `
+//         <div class="card-outline">
+//             <div class="card">
+//                 <img class="cardImg" src="` + contextPath + `/images/dogTestImg.jpg" alt="adoptable pet image">
+//                     <div class="cardTextContainer">
+//                         <h4><b>Dog Doe</b></h4>
+//                         <p>Golden Retriever</p>
+//                     </div>
+//             </div>
+//         </div>
+//             `;
+//     }
+//     document.getElementById('cards').innerHTML += htmlContent;
+//
+// });
 //
 //
 //
