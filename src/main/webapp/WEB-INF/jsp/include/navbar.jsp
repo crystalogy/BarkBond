@@ -122,7 +122,7 @@
     <div class="headerContainer">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none justify-content-start">
             <div class="logoContainer">
-                <img width="210" class="logo" src="${pageContext.request.contextPath}images/logo.png" alt="logo">
+                <img width="210" class="logo" src="${pageContext.request.contextPath}/pub/images/logo.png" alt="logo">
             </div>
         </a>
 
@@ -149,7 +149,7 @@
                 <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown">
                     <div class="d-flex align-items-center">
                         <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img class="rounded-circle ms-2 sm-user-image" src="${pageContext.request.contextPath}images/no-profile-picture.jpg" alt="Profile image">
+                            <img class="rounded-circle ms-2 sm-user-image" src="${pageContext.request.contextPath}/pub/images/no-profile-picture.jpg" alt="Profile image">
                             <span class="font-weight-normal users-name"><sec:authentication property="name" /></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
@@ -174,6 +174,6 @@
         </div>
     </div>
 
-    <link rel="stylesheet" href="${pageContext.request.contextPath}css/global.css">
-    <script src="${pageContext.request.contextPath}resources/static/js/user-dropdown.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/pub/css/global.css">
+    <script src="${pageContext.request.contextPath}/pub/js/user-dropdown.js"></script>
 </header>

@@ -197,7 +197,7 @@
 
 <!-- External Resources -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
-<link rel="stylesheet" href="${pageContext.request.contextPath}\css\account.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}\pub\css\account.css">
 
 <!-- Container for Sign In/Sign Up -->
 <div class="container" id="container">
