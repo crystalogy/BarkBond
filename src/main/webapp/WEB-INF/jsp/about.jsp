@@ -1,7 +1,7 @@
 <jsp:include page="include/header.jsp" />
 <jsp:include page="include/navbar.jsp" />
 
-<link rel="stylesheet" href="${pageContext.request.contextPath}\css\about.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}pub\css\about.css">
 
 
 
@@ -19,7 +19,7 @@
 <%--    </div>--%>
 
     <div class="image-section">
-        <img id="dog-image" src="${pageContext.request.contextPath}images/IMG_1319.jpg" usemap="#image-map" alt="Eevee" class="eevee-image">
+        <img id="dog-image" src="${pageContext.request.contextPath}pub/images/IMG_1319.jpg" usemap="#image-map" alt="Eevee" class="eevee-image">
 
         <map name="image-map">
             <!-- Adjust the coordinates to precisely cover the dog's nose -->

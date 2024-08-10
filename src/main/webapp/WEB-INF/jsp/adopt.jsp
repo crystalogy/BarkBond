@@ -4,11 +4,14 @@
 <jsp:include page="include/header.jsp" />
 <jsp:include page="include/navbar.jsp" />
 
-<link rel="stylesheet" href="${pageContext.request.contextPath}css/adopt.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}css/adoptStyle.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}js/card.js">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/pub/css/adopt.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/pub/css/adoptStyle.css">
+<%--<link rel="stylesheet" href="${pageContext.request.contextPath}/pub/js/card.js">--%>
 
 <div class="locationBarContainer">
+
+
+
     <div class="locationBar">
         <div class="md-12 mt-12 dropdown-pet-type">
             <select class="form-select border-0">f
@@ -19,6 +22,7 @@
                 <option value="3">Small & Furry</option>
                 <option value="3">Horses</option>
                 <option value="3">Scales Fins & Others</option>
+                <option value="3">Barnyard</option>
             </select>
         </div>
         <div class="md-12 mt-12 location-search">
@@ -49,10 +53,18 @@
 
                 <label for="age">Size:</label>
                 <select id="age" name="age" class="form-control mb-3">
+                    <option value="puppy">All</option>
                     <option value="puppy">Small</option>
                     <option value="puppy">Medium</option>
                     <option value="young">Large</option>
                     <option value="adult">Extra Large</option>
+                </select>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="age" class="form-control mb-3">
+                    <option value="puppy">All</option>
+                    <option value="puppy">Female</option>
+                    <option value="puppy">Male</option>
                 </select>
 
 
@@ -61,7 +73,7 @@
                     <label class="form-check-label" for="has-3d-tour">Special Needs</label>
                 </div>
 
-                <button class="btn btn-primary">Apply</button>
+                <button class="btn btn-apply">Apply</button>
                 <button class="btn btn-secondary">Reset all filters</button>
             </div>
         </div>
@@ -73,36 +85,21 @@
 </div>
 
 
-
 <div id="cardContainer">
-    <div id="cardOutline">
-        <div id="cards"></div>
+    <div id="cards">
+        <c:forEach items="${animals}" var="animal">
+            <div class="card">
+                <img class="cardImg" src="${pageContext.request.contextPath}${animal.photoUrl}" alt="animal image"/>
+                <div class="card-contents">
+                    <h6>${animal.name}</h6>
+                    <p>${animal.breed}</p>
+                    <p>${animal.gender}</p>
+                    <p>${animal.age}</p>
+                </div>
+            </div>
+        </c:forEach>
     </div>
 </div>
-
-
-
-<script src="${pageContext.request.contextPath}js/card.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-
-<c:forEach items="${animals}" var="animal">
-    <div class="card">
-        <div>
-            <img class="cardImg" src="${pageContext.request.contextPath}${animal.photoUrl}" alt="animal image"/>
-        </div>
-        <div class="card-content">
-            <h3>${animal.name}</h3>
-            <p>${animal.breed}</p>
-            <p>${animal.age}</p>
-        </div>
-    </div>
-</c:forEach>
-
-
-
 
 <div id="pageNumContainer">
     <div class="pagination" id="adoptPagination">
@@ -135,12 +132,16 @@
 <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
 <!-- Root element for React app -->
 <div id="react-root"></div>
 
 <!-- Render React component -->
 <script type="text/babel">
-    import FetchPets from '/static/js';
+    import FetchPets from 'webapp/pub/js';
 
     ReactDOM.render(<FetchPets />, document.getElementById('react-root'));
 </script>
