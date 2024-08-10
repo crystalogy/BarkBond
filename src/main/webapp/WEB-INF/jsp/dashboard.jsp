@@ -2,7 +2,8 @@
 <jsp:include page="include/header.jsp" />
 <jsp:include page="include/navbar.jsp" />
 
-<link rel="stylesheet" href="${pageContext.request.contextPath}\css\dashboard.css">
+
+<link rel="stylesheet" href="${pageContext.request.contextPath}/pub/css/dashboard.css">
 
 <main class="main">
     <div class="responsive-wrapper">
@@ -52,14 +53,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
                                 <tr>
                                     <td>${animal.animalID}</td>
-                                    <%--<td>${animal.status}</td>--%>
                                         <td>
                                             <c:choose>
-                                                <c:when test="${animal.status == 'Available'}">
-                                                    <span class="status-green">${animal.status}</span>
+                                                <c:when test="${animal.status == 'available'}">
+                                                    <span class="status-available">${animal.status}</span>
                                                 </c:when>
                                                 <c:otherwise>
-                                                    <span class="status-red">${animal.status}</span>
+                                                    <span class="status-unavailable">${animal.status}</span>
                                                 </c:otherwise>
                                             </c:choose>
                                         </td>
@@ -221,4 +221,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-<script src="${pageContext.request.contextPath}js/dashboard.js"></script>
+<script src="${pageContext.request.contextPath}pub/js/dashboard.js"></script>
+

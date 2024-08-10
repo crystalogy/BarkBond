@@ -378,11 +378,19 @@ html {
 
 
 /*----------------------⬇️Status Text Color⬇️-----------------------------*/
-.status-green {
+.status-available {
     color: #00ff00;
 }
 
-.status-red {
+.status-unavailable {
     color: #ff0000;
 }
 /*-------------------------------------------------------------------------*/
+
+.database-input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
