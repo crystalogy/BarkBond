@@ -7,10 +7,10 @@ import lombok.*;
 @Setter
 public class CreateAccountFormBean {
 
-//    @NotEmpty
+    @NotEmpty
     private String firstName;
 
-//    @NotEmpty
+    @NotEmpty
     private String lastName;
 
     @NotEmpty
@@ -19,7 +19,6 @@ public class CreateAccountFormBean {
     @NotEmpty
     private String password;
 
-    @NotEmpty
     private String role;
 
 }

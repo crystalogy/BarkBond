@@ -15,7 +15,6 @@ import org.springframework.security.web.util.matcher.*;
 
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-
 @Configuration
 public class SpringSecurity {
 
@@ -31,6 +30,7 @@ public class SpringSecurity {
         http.authorizeRequests()
                 .requestMatchers(
                         new AntPathRequestMatcher("/admin/**"),
+                        new AntPathRequestMatcher("/orgAdmin/**"),
                         new AntPathRequestMatcher("/user/**")).authenticated()
                 .anyRequest().permitAll();
 
