@@ -1,6 +1,7 @@
 package com.barkbond.controller;
 
 import com.barkbond.database.entity.*;
+import com.barkbond.form.CreateAnimalFormBean;
 import com.barkbond.service.*;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
@@ -47,17 +48,19 @@ public class DashboardController {
         response.addObject("animalList", animals);
         response.addObject("userList", users);
         response.addObject("organizationList", organizations);
+        response.addObject("animalForm", new CreateAnimalFormBean()); // Add form object to model
         return response;
     }
 
     @PostMapping("/dashboard")
     public String saveAnimalData(HttpServletRequest request) {
-        // Extract the form parameters
         String[] newStatus = request.getParameterValues("newStatus");
         String[] newAnimalType = request.getParameterValues("newAnimalType");
         String[] newBreed = request.getParameterValues("newBreed");
         String[] newName = request.getParameterValues("newName");
+        String[] newGender = request.getParameterValues("newGender");
         String[] newAge = request.getParameterValues("newAge");
+        String[] newPhotoUrl = request.getParameterValues("newPhotoUrl");
         String[] newOrganizationID = request.getParameterValues("newOrganizationID");
 
         // Loop through the parameters and save each new animal
@@ -68,7 +71,9 @@ public class DashboardController {
                 animal.setAnimalType(newAnimalType[i]);
                 animal.setBreed(newBreed[i]);
                 animal.setName(newName[i]);
+                animal.setGender(newGender[i]);
                 animal.setAge(newAge[i]);
+                animal.setPhotoUrl(newPhotoUrl[i]);
                 animal.setOrganizationId(Integer.parseInt(newOrganizationID[i]));
 
                 animalService.saveAnimal(animal);

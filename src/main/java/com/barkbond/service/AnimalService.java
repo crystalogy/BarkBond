@@ -27,6 +27,7 @@ public class AnimalService {
         animal.setAnimalType(form.getBreed());
         animal.setAge(form.getAge());
         animal.setGender(form.getGender());
+        animal.setPhotoUrl(form.getPhotoUrl());
         animal.setCreateDate(new Date());
         animalDao.save(animal);
         return animal;

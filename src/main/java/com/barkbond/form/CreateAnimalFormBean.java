@@ -12,33 +12,33 @@ public class CreateAnimalFormBean {
 
 
 
-    @NotEmpty
+
     private String animalID;
 
     @NotEmpty
     private String adoptionStatus;
 
-    @NotEmpty
+    @NotEmpty(message = "Animal type is required")
     private String animalType;
 
-    @NotEmpty
+    @NotEmpty(message = "Breed is required")
     private String breed;
 
-    @NotEmpty
+    @NotEmpty(message = "Gender is required")
     private String gender;
 
-    @NotEmpty
+    @NotEmpty(message = "Animal name is required")
     private String animalName;
 
-    @NotEmpty
+    @NotEmpty(message = "Age is required")
     private String age;
 
-    @NotEmpty
+    @NotEmpty(message = "Organization ID is required")
     private String organizationId;
 
-    @NotEmpty
+    @NotEmpty(message = "Photo URL is required")
     private String photoUrl;
 
-    @NotEmpty
+
     private String createDate;
 }
