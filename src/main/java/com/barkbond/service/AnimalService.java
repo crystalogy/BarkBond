@@ -31,4 +31,8 @@ public class AnimalService {
         animalDao.save(animal);
         return animal;
     }
+
+    public void saveAnimal(Animal animal) {
+        animalDao.save(animal);
+    }
 }

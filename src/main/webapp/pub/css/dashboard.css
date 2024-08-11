@@ -134,9 +134,7 @@ body {
     overflow: hidden;
 }
 
-.main {
-    padding-top: 3rem;
-}
+
 
 .main-header {
     display: flex;
@@ -275,10 +273,11 @@ body {
 
 .dashboard-panel-content {
     border-top: 1px solid var(--c-border-primary);
-    margin-top: 2rem;
+    margin-top: 5px;
     display: flex;
     align-items: flex-start;
 }
+
 .dashboard-content-panel {
     display: none;
     max-width: 280px;
@@ -405,7 +404,7 @@ html {
 
 
 /* Ensure the table remains the same size */
-#dashboard-table {
+.dashboard-table {
     table-layout: fixed;
     width: 100%;
     font-size: 0.85rem;
@@ -417,3 +416,33 @@ html {
     white-space: nowrap;
 }
 
+/* -- ID column width -- */
+#dashboard-table th:nth-child(1),
+#dashboard-table td:nth-child(1) {
+    width: 50px;
+}
+
+.dashboard-btn-container {
+        display: flex;
+        justify-content: flex-end;
+        width: 90%;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+.dashboard-btn {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.dashboard-btn:first-child {
+    margin-left: 0; /* Remove left margin for the first button */
+}
+
+main {
+    margin-top: 0 !important; /* Ensure no margin above the main content */
+    padding-top: 0; /* Ensure no padding above the main content */
+}

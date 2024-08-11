@@ -2,10 +2,12 @@ package com.barkbond.controller;
 
 import com.barkbond.database.entity.*;
 import com.barkbond.service.*;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -46,6 +48,34 @@ public class DashboardController {
         response.addObject("userList", users);
         response.addObject("organizationList", organizations);
         return response;
+    }
+
+    @PostMapping("/dashboard")
+    public String saveAnimalData(HttpServletRequest request) {
+        // Extract the form parameters
+        String[] newStatus = request.getParameterValues("newStatus");
+        String[] newAnimalType = request.getParameterValues("newAnimalType");
+        String[] newBreed = request.getParameterValues("newBreed");
+        String[] newName = request.getParameterValues("newName");
+        String[] newAge = request.getParameterValues("newAge");
+        String[] newOrganizationID = request.getParameterValues("newOrganizationID");
+
+        // Loop through the parameters and save each new animal
+        if (newStatus != null) {
+            for (int i = 0; i < newStatus.length; i++) {
+                Animal animal = new Animal();
+                animal.setStatus(newStatus[i]);
+                animal.setAnimalType(newAnimalType[i]);
+                animal.setBreed(newBreed[i]);
+                animal.setName(newName[i]);
+                animal.setAge(newAge[i]);
+                animal.setOrganizationId(Integer.parseInt(newOrganizationID[i]));
+
+                animalService.saveAnimal(animal);
+            }
+        }
+
+        return "redirect:/dashboard";
     }
 
 }
