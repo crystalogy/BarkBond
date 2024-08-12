@@ -6,7 +6,8 @@
 
 <link rel="stylesheet" href="${pageContext.request.contextPath}/pub/css/adopt.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/pub/css/adoptStyle.css">
-<%--<link rel="stylesheet" href="${pageContext.request.contextPath}/pub/js/card.js">--%>
+<script src="${pageContext.request.contextPath}/pub/js/adopt.js"></script>
+
 
 <div class="locationBarContainer">
 
@@ -39,44 +40,84 @@
                 More
             </button>
 
+<%--            <div class="dropdown-menu p-4" aria-labelledby="dropdownMenuButton">--%>
+<%--                <label for="age">Age:</label>--%>
+<%--                <select id="age" name="age" class="form-control mb-3">--%>
+<%--                    <option value="puppy">All</option>--%>
+<%--                    <option value="puppy">Puppy</option>--%>
+<%--                    <option value="young">Young</option>--%>
+<%--                    <option value="adult">Adult</option>--%>
+<%--                    <option value="senior">Senior</option>--%>
+<%--                </select>--%>
+
+<%--                <label for="age">Size:</label>--%>
+<%--                <select id="age" name="age" class="form-control mb-3">--%>
+<%--                    <option value="puppy">All</option>--%>
+<%--                    <option value="puppy">Small</option>--%>
+<%--                    <option value="puppy">Medium</option>--%>
+<%--                    <option value="young">Large</option>--%>
+<%--                    <option value="adult">Extra Large</option>--%>
+<%--                </select>--%>
+
+<%--                <label for="gender">Gender:</label>--%>
+<%--                <select id="gender" name="age" class="form-control mb-3">--%>
+<%--                    <option value="puppy">All</option>--%>
+<%--                    <option value="puppy">Female</option>--%>
+<%--                    <option value="puppy">Male</option>--%>
+<%--                </select>--%>
+
+
+<%--                <div class="form-check mb-2">--%>
+<%--                    <input type="checkbox" id="has-3d-tour" name="has-3d-tour" class="form-check-input" checked>--%>
+<%--                    <label class="form-check-label" for="has-3d-tour">Special Needs</label>--%>
+<%--                </div>--%>
+
+<%--                <button class="btn btn-apply">Apply</button>--%>
+<%--                <button class="btn btn-secondary">Reset all filters</button>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+
+
             <div class="dropdown-menu p-4" aria-labelledby="dropdownMenuButton">
-
-
                 <label for="age">Age:</label>
-                <select id="age" name="age" class="form-control mb-3">
-                    <option value="puppy">All</option>
+                <select id="filter-age" name="age" class="form-control mb-3">
+                    <option value="all">All</option>
                     <option value="puppy">Puppy</option>
                     <option value="young">Young</option>
                     <option value="adult">Adult</option>
                     <option value="senior">Senior</option>
                 </select>
 
-                <label for="age">Size:</label>
-                <select id="age" name="age" class="form-control mb-3">
-                    <option value="puppy">All</option>
-                    <option value="puppy">Small</option>
-                    <option value="puppy">Medium</option>
-                    <option value="young">Large</option>
-                    <option value="adult">Extra Large</option>
+                <label for="size">Size:</label>
+                <select id="filter-size" name="size" class="form-control mb-3">
+                    <option value="all">All</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="extra-large">Extra Large</option>
                 </select>
 
                 <label for="gender">Gender:</label>
-                <select id="gender" name="age" class="form-control mb-3">
-                    <option value="puppy">All</option>
-                    <option value="puppy">Female</option>
-                    <option value="puppy">Male</option>
+                <select id="filter-gender" name="gender" class="form-control mb-3">
+                    <option value="all">All</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
                 </select>
 
-
                 <div class="form-check mb-2">
-                    <input type="checkbox" id="has-3d-tour" name="has-3d-tour" class="form-check-input" checked>
-                    <label class="form-check-label" for="has-3d-tour">Special Needs</label>
+                    <input type="checkbox" id="filter-special-needs" name="specialNeeds" class="form-check-input">
+                    <label class="form-check-label" for="filter-special-needs">Special Needs</label>
                 </div>
 
-                <button class="btn btn-apply">Apply</button>
-                <button class="btn btn-secondary">Reset all filters</button>
+                <button class="btn btn-apply" id="apply-filters">Apply</button>
+                <button class="btn btn-secondary" id="reset-filters">Reset all filters</button>
             </div>
         </div>
+
+
+
+
+
 
         <%--        <a href="${pageContext.request.contextPath}/account/create-account?view=signin" class="btn btn-outline-secondary btn-sm login-btn" id="login-header">More</a>--%>
 
@@ -132,16 +173,14 @@
 <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
 
 <!-- Root element for React app -->
 <div id="react-root"></div>
 
 <!-- Render React component -->
 <script type="text/babel">
-    import FetchPets from 'webapp/pub/js';
+    // import FetchPets from 'webapp/pub/js';
+    FetchPets();
 
     ReactDOM.render(<FetchPets />, document.getElementById('react-root'));
 </script>
