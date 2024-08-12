@@ -36,4 +36,8 @@ public class AnimalService {
     public void saveAnimal(Animal animal) {
         animalDao.save(animal);
     }
+
+    public Animal getAnimalById(Long id) {
+        return animalDao.findById(id).orElse(null);
+    }
 }
