@@ -2,6 +2,7 @@ package com.barkbond.service;
 
 import com.barkbond.database.dao.*;
 import com.barkbond.database.entity.*;
+import com.barkbond.dto.AnimalFilterCriteria;
 import com.barkbond.form.CreateAnimalFormBean;
 import lombok.extern.slf4j.*;
 import org.springframework.beans.factory.annotation.*;
@@ -40,4 +41,23 @@ public class AnimalService {
     public Animal getAnimalById(Long id) {
         return animalDao.findById(id).orElse(null);
     }
+
+//    public List<Animal> filterAnimals(AnimalFilterCriteria criteria) {
+//        // Custom logic to handle "all" or default values
+//        if ("all".equalsIgnoreCase(criteria.getAge()) &&
+//                "all".equalsIgnoreCase(criteria.getSize()) &&
+//                "all".equalsIgnoreCase(criteria.getGender()) &&
+//                !criteria.isSpecialNeeds()) {
+//            return animalDao.findAll(); // No filters applied, return all animals
+//        }
+
+        // Use the combined method if possible
+//        return animalDao.findByAgeAndSizeAndGenderAndSpecialNeeds(
+//                criteria.getAge().equals("all") ? null : criteria.getAge(),
+//                criteria.getSize().equals("all") ? null : criteria.getSize(),
+//                criteria.getGender().equals("all") ? null : criteria.getGender(),
+//                criteria.isSpecialNeeds()
+//        );
+//    }
+
 }
