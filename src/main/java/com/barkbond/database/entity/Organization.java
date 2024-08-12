@@ -14,6 +14,9 @@ import java.util.*;
 @Table(name = "organization")
 public class Organization {
 
+    @OneToMany(mappedBy = "organization",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    private List<Animal> animals;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

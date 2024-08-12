@@ -17,7 +17,7 @@ public class Animal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer animalID;
+    private Integer id;
 
     @Column(name = "adoption_status")
     private String status;
@@ -37,6 +37,12 @@ public class Animal {
     @Column(name = "age")
     private String age;
 
+    @Column(name = "size")
+    private String size;
+
+    @Column(name = "special_needs", columnDefinition = "TINYINT(1)")
+    private Boolean specialNeeds;
+
     @Column(name = "organization_id")
     private Integer organizationId;
 
@@ -47,8 +53,13 @@ public class Animal {
     @Temporal(TemporalType.TIMESTAMP)
     private Date createDate;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "organization_id", insertable = false, updatable = false)
+    private Organization organization;
+
     @PrePersist
     protected void onCreate() {
         createDate = new Date();
     }
+
 }
