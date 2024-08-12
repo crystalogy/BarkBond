@@ -48,6 +48,8 @@ public class LoginController {
 
     @Autowired
     private AuthenticatedUserUtilities authenticatedUserUtilities;
+    @Autowired
+    private AnimalDAO animalDAO;
 
     @GetMapping("/create-account")
     public ModelAndView createAccount() {
@@ -84,6 +86,8 @@ public class LoginController {
     ModelAndView loginSuccess() {
         ModelAndView response = new ModelAndView();
         User user = authenticatedUserUtilities.getCurrentUserObject();
+        log.debug("User: " + user);
+
         if(authenticatedUserUtilities.isUserInRole("ADMIN")){
             // where to send admin after login
             response = new ModelAndView("redirect:/");
@@ -96,8 +100,6 @@ public class LoginController {
         response.addObject("user", user);
         return response;
     }
-
-
 
 
     @GetMapping("/login")
@@ -127,5 +129,7 @@ public class LoginController {
             return "login";
         }
     }
+
+
 }
 

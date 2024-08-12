@@ -57,7 +57,6 @@ public class indexController {
 
     @GetMapping("/resources")
     public ModelAndView resources() {
-        // this page
         ModelAndView response = new ModelAndView("resources");
 
         return response;
@@ -65,7 +64,6 @@ public class indexController {
 
     @GetMapping("/blog")
     public ModelAndView blog() {
-        // this page
         ModelAndView response = new ModelAndView("blog");
 
         return response;
@@ -73,7 +71,6 @@ public class indexController {
 
     @GetMapping("/help")
     public ModelAndView help() {
-        // this page
         ModelAndView response = new ModelAndView("help");
 
         return response;
