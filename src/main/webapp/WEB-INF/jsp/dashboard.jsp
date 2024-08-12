@@ -5,8 +5,8 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/pub/css/dashboard.css">
 
 <div class="dashboard-btn-container">
-    <button id="addRowButton" class="btn btn-primary dashboard-btn">Add Row</button>
-    <button type="submit" form="animalForm" class="btn btn-primary dashboard-btn">Save</button>
+    <button id="addRowButton" class="btn dashboard-btn">Add Row</button>
+    <button type="submit" form="animalForm" class="btn dashboard-btn">Save</button>
 </div>
 
 <main>

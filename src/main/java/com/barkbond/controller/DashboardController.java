@@ -6,6 +6,7 @@ import com.barkbond.service.*;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -39,6 +40,7 @@ public class DashboardController {
 //        return response;
 //    }
 
+    @PreAuthorize("hasAnyAuthority('ADMIN','OrgAdmin')")
     @GetMapping("/dashboard")
     public ModelAndView dashboard() {
         ModelAndView response = new ModelAndView("dashboard");
@@ -52,6 +54,7 @@ public class DashboardController {
         return response;
     }
 
+    @PreAuthorize("hasAnyAuthority('ADMIN','OrgAdmin')")
     @PostMapping("/dashboard")
     public String saveAnimalData(HttpServletRequest request) {
         String[] newStatus = request.getParameterValues("newStatus");

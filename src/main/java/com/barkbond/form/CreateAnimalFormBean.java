@@ -10,9 +10,7 @@ import lombok.ToString;
 @ToString
 public class CreateAnimalFormBean {
 
-
-
-
+    @NotEmpty
     private String animalID;
 
     @NotEmpty
