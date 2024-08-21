@@ -38,8 +38,6 @@ public class LoginController {
     @Autowired
     private UserDetailsService userDetailsService;
 
-
-
     @Autowired
     private UserDAO userDao;
 
