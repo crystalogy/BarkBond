@@ -13,7 +13,7 @@ header {
 
 .headerContainer {
     display: flex;
-    flex-direction: row; /* Ensure items are in a row */
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
@@ -23,8 +23,6 @@ header {
 .logoContainer{
     display: flex;
     justify-content: center;
-    /* height: 5vh;
-    min-width: 250px; */
     width: auto;
     margin-top: .5vh;
     margin-left: 2vh;
@@ -43,7 +41,7 @@ header {
 }
 
 .mainNavContainer {
-    flex-grow: 1; /* Allow the main navigation to grow */
+    flex-grow: 1;
     display: flex;
     justify-content: center;
 }
@@ -94,29 +92,22 @@ header {
 
 
 
-/*sign up button*/
 .signup-btn{
     white-space: nowrap;
     background-color: #FDA763 !important;
     margin-left: 15px;
-    /* position: absolute; */
+
     height: 30px;
     width: 80px;
 }
 
-/* .signup-btn:hover {
-  color: #63fdc2;
-}
- */
 
-/*login button*/
+
 .login-btn:hover {
     background-color: #0cbfdf71;
 }
 
 .login-btn {
-    /* background-color: #ddd;
-    color: #333; */
     background-color: transparent;
     color: #333;
     border: 1px solid #333;
@@ -126,14 +117,11 @@ header {
 
 .loginsign-btn-div{
     margin-left: auto;
-    /*position: relative;*/
-    /* padding-right: 140px; */
 }
 
 
 
 
-/* Media Queries */
 @media (max-width: 768px) {
     .headerContainer {
         flex-direction: column;
@@ -173,14 +161,11 @@ header {
 
 .mainnav li {
     position: relative;
-    /* display: inline-block; */
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 15px;
-    /* padding: 10px 10px 0 0; */
     font-family: "Josefin Sans", sans-serif;
-    /* font-optical-sizing: auto; */
     font-size: 15px;
     font-weight: 500;
     font-style: normal;
@@ -211,7 +196,6 @@ header {
         transform-origin: left;
     }
 }
-
 
 .nav-item {
     list-style: none;
@@ -294,35 +278,34 @@ header {
 }
 
 .users-name {
-    margin-left: 8px; /* Adjust as needed for spacing */
+    margin-left: 8px;
 }
 
-
 .locationBarContainer .btn-light {
-    height: 100%; /* Ensure the button takes the full height of its container */
-    background-color: white; /* Set background color to white */
+    height: 100%;
+    background-color: white;
     display: flex;
-    align-items: center; /* Center the content vertically */
-    justify-content: center; /* Center the content horizontally */
-    padding: 0 15px; /* Optional: Add padding for better appearance */
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
 }
 
 .locationBarContainer .form-select,
 .locationBarContainer .form-control,
 .locationBarContainer .btn-light {
-    height: 40px; /* Set a consistent height for all elements */
-    background-color: white; /* Set background color to white */
+    height: 40px;
+    background-color: white;
     display: flex;
-    align-items: center; /* Center the content vertically */
-    justify-content: center; /* Center the content horizontally */
-    padding: 0 15px; /* Optional: Add padding for better appearance */
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
 
 }
 
 .locationBarContainer .dropdown-pet-type,
 .locationBarContainer .location-search,
 .locationBarContainer .filters-dropdown {
-    margin-right: 15px; /* Adjust this value based on the identified margin size */
+    margin-right: 15px;
 }
 
 .filters-dropdown .btn-light.dropdown-toggle::after {
@@ -330,17 +313,16 @@ header {
 }
 
 .filters-dropdown .btn-light svg {
-    margin-right: 8px; /* Adjust this value to set the desired gap */
-    vertical-align: middle; /* Align SVG vertically with text */
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
 
-/* Remove focus outline glow for animal type dropdown and location search bar */
 .locationBarContainer .form-select:focus,
 .locationBarContainer .form-control:focus,
 .locationBarContainer .btn-light:focus {
-    box-shadow: none; /* Remove the glow effect */
-    border-color: initial; /* Reset border color */
+    box-shadow: none;
+    border-color: initial;
 }
 
 
