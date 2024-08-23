@@ -37,12 +37,12 @@
         <div class="mainNavContainer">
             <nav class="mainnav">
                 <ul class="menuItems">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="${pageContext.request.contextPath}/about">About</a></li>
-                    <li><a href="${pageContext.request.contextPath}/adopt/animals">Adopt</a></li>
-                    <li><a href="${pageContext.request.contextPath}/resources">Resources</a></li>
-                    <li><a href="${pageContext.request.contextPath}/blog">Blog</a></li>
-                    <li><a href="${pageContext.request.contextPath}/help">Ways to give</a></li>
+                    <li><a href="../StaticFrontend/index.html">Home</a></li>
+                    <li><a href="../StaticFrontend/about.html">About</a></li>
+                    <li><a href="../StaticFrontend/adopt.html">Adopt</a></li>
+                    <li><a href="../StaticFrontend/resources.html">Resources</a></li>
+                    <li><a href="../StaticFrontend/blog.html">Blog</a></li>
+                    <li><a href="../StaticFrontend/help.html">Ways to give</a></li>
                 </ul>
             </nav>
         </div>
@@ -51,35 +51,8 @@
                 <a href="${pageContext.request.contextPath}/account/create-account?view=signin" class="btn btn-outline-secondary btn-sm login-btn" id="login-header">Login</a>
                 <a href="${pageContext.request.contextPath}/account/create-account?view=signup" class="btn btn-sm text-white signup-btn" id="signup-header">Sign-up</a>
 
-
-                <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown">
-                    <div class="d-flex align-items-center">
-                        <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img class="rounded-circle ms-2 sm-user-image" src="../webapp/pub/images/no-profile-picture.jpg" alt="Profile image">
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-                            <a class="dropdown-item"><i class="dropdown-item-icon icon-user text-primary"></i> My Profile</a>
-                                <a class="dropdown-item" href="${pageContext.request.contextPath}/dashboard">
-                                    <i class="dropdown-item-icon icon-speech text-primary"></i>Dashboard
-                                </a>
-
-                            <a class="dropdown-item"><i class="dropdown-item-icon icon-energy text-primary"></i> Activity</a>
-                            <a class="dropdown-item" style="display: flex; align-items: center;">
-                                <i class="dropdown-item-icon icon-power text-primary"></i>
-                                <form action="login/logout" method="post" style="display: inline; margin: 0;">
-                                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                                    <button class="nav-link" type="submit" style="background: none; border: none; padding: 0; color: inherit; cursor: pointer; display: inline; margin: 0; text-transform: uppercase;">Sign Out</button>
-                                </form>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-
         </div>
     </div>
-
-
-    <script src="${pageContext.request.contextPath}pub/js/user-dropdown.js"></script>
 </header>
 
 
@@ -126,9 +99,6 @@
 </div>
 
 <div class="search-container" style="background-image: url('../webapp/pub/images/index-search-bg.png');">
-
-<!--<div class="search-container">-->
-
     <div class="img-container">
         <img class="dogs-img" src="../webapp/pub/images/dogs.png" alt="dog cat">
     </div>
