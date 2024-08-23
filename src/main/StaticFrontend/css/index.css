@@ -727,8 +727,6 @@ width: 150px;
 }
 
 .search-container{
-    z-index: 1000;
-    background-image: url('../webapp/pub/images/index-search-bg.png') !important;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
