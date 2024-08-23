@@ -65,15 +65,7 @@
 
 
 
-
-
-
-
 <div class="search-container">
-
-
-
-
 
 
     <div class="img-container">
