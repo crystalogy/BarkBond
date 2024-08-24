@@ -110,11 +110,47 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
-
     </div>
 
+    <script>
+
+        function hideDogs() {
+            const dogsImg = document.querySelector('.dogs-img');
+            const imgContainer = document.querySelector('.img-container');
+            const searchBox = document.querySelector('.search-box');
+
+            if (dogsImg) {
+                console.log(`Current screen width: ${window.innerWidth}`);
+                if (window.innerWidth <= 767) {
+                    dogsImg.style.display = 'none';
+                    imgContainer.style.width = '100%';
+                    searchBox.style.padding = '0';
+                    console.log('Dogs image hidden');
+                } else {
+                    dogsImg.style.display = ''; // Reset display property if screen width is greater than 405px
+                }
+            } else {
+                console.log('Dogs image not found');
+            }
+
+            if (imgContainer) {
+                if (window.innerWidth > 767) {
+                    imgContainer.style.display = 'flex';
+                    console.log('Image container display set to flex');
+                } else {
+                    imgContainer.style.display = ''; // Reset display property if screen width is less than or equal to 750px
+                }
+            } else {
+                console.log('Image container not found');
+            }
+        }
+
+        // Call the function on page load and resize
+        window.addEventListener('load', hideDogs);
+        window.addEventListener('resize', hideDogs);
+
+
+    </script>
 
 <jsp:include page="include/footer.jsp"/>
