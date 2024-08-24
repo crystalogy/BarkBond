@@ -65,8 +65,7 @@
 
 
 
-<div class="search-container">
-
+<div class="search-container"  style="background-image: url('${pageContext.request.contextPath}/pub/images/index-search-bg.png');">
 
     <div class="img-container">
         <img class="dogs-img" src="${pageContext.request.contextPath}\pub\images\dogs.png" alt="dog cat">
