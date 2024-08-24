@@ -756,8 +756,15 @@ ul {
 
 
 @media (max-width: 767px) {
+    .search-container {
+        flex-direction: column;
+    }
     .search-box {
         width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
     }
     .img-container {
         display: none;

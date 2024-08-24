@@ -149,12 +149,14 @@
    function hideDogs() {
     const dogsImg = document.querySelector('.dogs-img');
     const imgContainer = document.querySelector('.img-container');
+    const searchBox = document.querySelector('.search-box');
 
     if (dogsImg) {
         console.log(`Current screen width: ${window.innerWidth}`);
         if (window.innerWidth <= 767) {
             dogsImg.style.display = 'none';
             imgContainer.style.width = '100%';
+            searchBox.style.padding = '0';
             console.log('Dogs image hidden');
         } else {
             dogsImg.style.display = ''; // Reset display property if screen width is greater than 405px
