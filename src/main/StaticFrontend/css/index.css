@@ -11,19 +11,19 @@
 .page-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /*justify-content: center;*/
     align-items: center;
     max-width: 1600px;
     max-height: 900px;
-    margin: 0 auto; /* Center the container itself */
+    margin: 0 auto; /* Centers the container itself */
 }
 
 .index-hero {
-    /*background-color: #ffffff;*/
-    width: 100%;
-    height: 600px;
+    width: 85vw;
+    /*height: 600px;*/
     position: relative;
 }
+
 @media (max-width: 2100px) {
     .index-hero {
         height: 800px;
@@ -33,6 +33,7 @@
     .index-hero {
         height: 800px;
     }
+
 }
 @media (max-width: 1500px) {
     .index-hero {
@@ -48,13 +49,19 @@
 
 @media (max-width: 900px) {
     .index-hero {
-        height: 500px;
+        height: 640px;
+    }
+}
+
+@media (max-width: 750px) {
+    .index-hero {
+        height: 650px;
     }
 }
 
 @media (max-width: 600px) {
     .index-hero {
-        height: 400px;
+        height: 650px;
     }
 }
 
@@ -64,6 +71,31 @@
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero-container {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-top: 50px;
+    transform: translateX(-50%);
+    width: 100%; /*max-width: 1200px;*/
+    z-index: 1;
+}
 
 .index-hero-ul {
     display: grid;
@@ -95,8 +127,6 @@
     background-size: 50% 100%, 100% 100%;
     background-position: left, right;
 }
-
-
 
 
 .index-hero-ul li::before {
@@ -310,7 +340,7 @@
     top: 93%;
     transform: translateX(-50%) translateY(-60%);
     transition: transform 0.3s ease;
-    clip-path: polygon(0% 0%, 100% 0, 75% 55%, 68% 62%, 62% 68%, 60% 73%, 0% 57%);
+    clip-path: polygon(0% 0%, 100% 0, 55% 39%, 30% 45%, 52% 58%, 50% 53%, 30% 47%);
 }
 
 .index-hero-ul li:hover .hero-img-size-4 {
@@ -380,6 +410,9 @@
     .index-hero-ul li:nth-child(4n-1) {
         grid-column-start: 2;
     }
+    .index-hero-ul li:nth-child(n+7) {
+        display: none;
+    }
 }
 @media (min-width: 900px) {
     :root {
@@ -391,7 +424,12 @@
     .index-hero-ul li:nth-child(6n-2) {
         grid-column-start: 2;
     }
+    .index-hero-ul li:nth-child(n+7) {
+        display: none;
+    }
 }
+
+
 @media (min-width: 1200px) {
     :root {
         --columns: 9;
@@ -401,6 +439,9 @@
     }
     .index-hero-ul li:nth-child(8n-3) {
         grid-column-start: 2;
+    }
+    .index-hero-ul li:nth-child(n+7) {
+        display: flex;
     }
 }
 @media (min-width: 1500px) {
@@ -506,7 +547,7 @@ ul {
 
                 span {
                     width:5px;
-                    height: 5px;
+                    height: 6px;
                     -webkit-border-radius: 50%;
                     -moz-border-radius: 50%;
                     border-radius: 50%;
@@ -539,7 +580,7 @@ ul {
 
         @keyframes secBlock {
             0% {
-                width: 0%;
+                width: 0;
                 left: 0;
             }
             50% {
@@ -547,7 +588,7 @@ ul {
                 left: 0;
             }
             100% {
-                width: 100%; /* Keep the block visible at the end */
+                width: 100%;
                 left: 0;
             }
         }
@@ -558,7 +599,7 @@ ul {
 
 @keyframes mainBlock {
     0% {
-        width: 0%;
+        width: 0;
         left: 0;
 
     }
@@ -575,7 +616,7 @@ ul {
 
 @keyframes secBlock {
     0% {
-        width: 0%;
+        width: 0;
         left: 0;
 
     }
@@ -602,10 +643,10 @@ ul {
 
 @keyframes popIn {
     0% {
-        width: 0px;
-        height: 0px;
+        width: 0;
+        height: 0;
         background: #FFBF5FFF;
-        border: 0px solid #FFBF5FFF;
+        border: 0 solid #FFBF5FFF;
         opacity: 0;
     }
     50% {
@@ -616,10 +657,10 @@ ul {
         bottom: 45px;
     }
     65% {
-        width: 7px;
+        /*width: 7px;*/
         height: 7px;
-        bottom: 0px;
-        width: 15px
+        bottom: 0;
+        width: 15px;
     }
     80% {
         width: 10px;
@@ -630,7 +671,7 @@ ul {
         width: 7px;
         height: 7px;
         background: #FFBF5FFF;
-        border: 0px solid #222;
+        border: 0 solid #222;
         bottom: 13px;
 
     }
@@ -653,7 +694,7 @@ ul {
     }
     100% {
         opacity: 1;
-        bottom: 0px
+        bottom: 0;
 
     }
 }
@@ -669,7 +710,7 @@ ul {
     }
     100% {
         opacity: 1;
-        bottom: 0px;
+        bottom: 0;
     }
 }
 
@@ -707,6 +748,11 @@ ul {
     padding-right: 3%;
 }
 
+
+.search-box {
+    padding-right: 6%;
+}
+
 .center-button {
     display: flex;
     justify-content: center;
@@ -734,6 +780,7 @@ width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 0;
 }
 
 .img-container {
