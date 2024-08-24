@@ -144,25 +144,43 @@
     </div>
 </div>
 
-<!--<script>-->
+<script>
 
-<!--    function adjustSearchContainerMargin() {-->
-<!--        const searchContainer = document.querySelector('.search-container');-->
+   function hideDogs() {
+    const dogsImg = document.querySelector('.dogs-img');
+    const imgContainer = document.querySelector('.img-container');
 
-<!--        // Set the margin-top of search-container to 15px-->
-<!--        searchContainer.style.marginTop = '15px';-->
-<!--        console.log(`Fixed margin-top set to 15px`);-->
-<!--    }-->
+    if (dogsImg) {
+        console.log(`Current screen width: ${window.innerWidth}`);
+        if (window.innerWidth <= 767) {
+            dogsImg.style.display = 'none';
+            imgContainer.style.width = '100%';
+            console.log('Dogs image hidden');
+        } else {
+            dogsImg.style.display = ''; // Reset display property if screen width is greater than 405px
+        }
+    } else {
+        console.log('Dogs image not found');
+    }
 
-<!--    // Call the function on page load and resize-->
-<!--    window.addEventListener('load', adjustSearchContainerMargin);-->
-<!--    window.addEventListener('resize', adjustSearchContainerMargin);-->
+    if (imgContainer) {
+        if (window.innerWidth > 767) {
+            imgContainer.style.display = 'flex';
+            console.log('Image container display set to flex');
+        } else {
+            imgContainer.style.display = ''; // Reset display property if screen width is less than or equal to 750px
+        }
+    } else {
+        console.log('Image container not found');
+    }
+}
+
+// Call the function on page load and resize
+window.addEventListener('load', hideDogs);
+window.addEventListener('resize', hideDogs);
 
 
-
-
-
-<!--</script>-->
+</script>
 
 </body>
 </html>

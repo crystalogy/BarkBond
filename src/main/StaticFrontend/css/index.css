@@ -751,6 +751,17 @@ ul {
 
 .search-box {
     padding-right: 6%;
+    width: calc(60% - 40px); /* Adjust width to account for padding */
+}
+
+
+@media (max-width: 767px) {
+    .search-box {
+        width: 100%;
+    }
+    .img-container {
+        display: none;
+    }
 }
 
 .center-button {
@@ -781,10 +792,10 @@ width: 150px;
     justify-content: center;
     align-items: center;
     margin-top: 0;
+
 }
 
 .img-container {
-    display: flex;
     justify-content: center;
     align-items: flex-end; /* Aligns the image to the bottom */
     width: 100%;
