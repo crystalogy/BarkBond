@@ -5,7 +5,6 @@
 <jsp:include page="include/navbar.jsp" />
 
 <link rel="stylesheet" href="${pageContext.request.contextPath}/pub/css/adopt.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/pub/css/adoptStyle.css">
 <script src="${pageContext.request.contextPath}/pub/js/adopt.js"></script>
 
 
@@ -127,6 +126,7 @@
 
 
 <div id="cardContainer">
+    <div id="cards-wrapper">
     <div id="cards">
         <c:forEach items="${animals}" var="animal">
             <div class="card">
@@ -140,6 +140,7 @@
             </div>
         </c:forEach>
     </div>
+</div>
 </div>
 
 <div id="pageNumContainer">

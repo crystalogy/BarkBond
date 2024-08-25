@@ -214,18 +214,46 @@ main {
     /*width: 75%;*/
     /*margin-top: 70px;*/
     /*margin-left: 20%;*/
-    margin: 60px;
+    /*margin: 60px auto;*/
+    margin: 0 auto; /* Centers the container horizontally */
+    width: 65%;
+    /*display: flex;*/
+    /*justify-content: center;*/
 }
 
+/*#cards-wrapper{*/
+/*    margin: 60px auto; !* Centers #cardContainer horizontally on the page *!*/
+/*    width: 100%; !* Adjust the width as needed *!*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*#cards {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: start;*/
+/*    gap: 10px;*/
+/*    row-gap: 50px ;*/
+/*    !*align-content: flex-start;*!*/
+/*    max-width: 100%; !* Ensures it doesn’t exceed the parent’s width *!*/
+/*}*/
+
+#cards-wrapper {
+    display: grid;
+    /*justify-content: center; !* Centers the grid within the wrapper *!*/
+    width: 100%;
+    margin-top: 25px;
+}
 
 #cards {
-    display: flex;
-    flex-wrap: wrap;;
-    justify-content: start;
-    gap: 10px;
-    row-gap: 50px ;
-    align-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+    gap : 25px !important;
+    justify-items: start; /* Aligns items to the start of each cell */
+    align-items: start; /* Aligns items to the start of each cell vertically */
 }
+
+
 
 /*.card-outline{*/
 /*    width: 200px;*/
@@ -237,6 +265,7 @@ main {
 .card {
     width: 240px;
     height: 300px;
+    max-width: 1600px;
     box-sizing: border-box;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
