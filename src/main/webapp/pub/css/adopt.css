@@ -221,9 +221,10 @@ main {
 #cards {
     display: flex;
     flex-wrap: wrap;;
-    justify-content: space-between;
+    justify-content: start;
     gap: 10px;
-    row-gap: 50px;
+    row-gap: 50px ;
+    align-content: flex-start;
 }
 
 /*.card-outline{*/
