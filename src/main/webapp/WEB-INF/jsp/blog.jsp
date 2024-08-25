@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}pub\css\blog.css">
 
 
-<div class="band">
+<div class="card-container">
     <div class="item-1">
         <a href="/" class="card">
             <div class="thumb" style="background-image: url('${pageContext.request.contextPath}pub/images/blog1.png');"></div>
