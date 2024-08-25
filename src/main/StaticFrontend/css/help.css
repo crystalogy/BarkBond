@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.blog-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.blog-page h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.post {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 300px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.post-image {
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.post:hover .post-image img {
+    transform: scale(1.1);
+}
+
+.post-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.post h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.post p {
+    font-size: 1em;
+    margin: 10px 0 20px;
+    color: #666;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffbf5f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #FFBF5FFF;
+}
+
+.post-image{
+    height: 200px;
+}
+
+.give-img {
+    object-fit: cover;
+    background-color: #fff; /* Ensures the padding area is white */
+}
