@@ -5,47 +5,47 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}pub\css\help.css">
 
 
-<div class="blog-page">
+<div class="cards-container">
     <h1>Ways to Give</h1>
-    <div class="blog-posts">
-        <div class="post">
-            <div class="post-image">
+    <div class="cards">
+        <div class="card">
+            <div class="card-image">
                 <img src="${pageContext.request.contextPath}pub/images/donate.png" alt="Donate">
             </div>
-            <div class="post-content">
+            <div class="card-content">
                 <h2>Donate</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec venenatis odio.</p>
-                <a href="${pageContext.request.contextPath}pub/images/post1.jsp" class="button">Read More</a>
+                <a href="${pageContext.request.contextPath}pub/images/post1.png" class="button">Read More</a>
             </div>
         </div>
-        <div class="post">
-            <div class="post-image">
+        <div class="card">
+            <div class="card-image">
                 <img class="give-img" src="${pageContext.request.contextPath}pub/images/volunteer.png" alt="Volunteer">
             </div>
-            <div class="post-content">
+            <div class="card-content">
                 <h2>Volunteer</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec venenatis odio.</p>
-                <a href="${pageContext.request.contextPath}pub/images/post2.jsp" class="button">Read More</a>
+                <a href="${pageContext.request.contextPath}pub/images/post2.png" class="button">Read More</a>
             </div>
         </div>
-        <div class="post">
-            <div class="post-image">
+        <div class="card">
+            <div class="card-image">
                 <img src="${pageContext.request.contextPath}pub/images/a1.png" alt="Foster">
             </div>
-            <div class="post-content">
+            <div class="card-content">
                 <h2>Foster</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec venenatis odio.</p>
-                <a href="${pageContext.request.contextPath}pub/images/post3.jsp" class="button">Read More</a>
+                <a href="${pageContext.request.contextPath}pub/images/post3.png" class="button">Read More</a>
             </div>
         </div>
-        <div class="post">
-            <div class="post-image">
+        <div class="card adopt">
+            <div class="card-image">
                 <img src="${pageContext.request.contextPath}pub/images/adopt.png" alt="Adopt">
             </div>
-            <div class="post-content">
+            <div class="card-content">
                 <h2>Adopt</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec venenatis odio.</p>
-                <a href="${pageContext.request.contextPath}pub/blog/post4.jsp" class="button">Read More</a>
+                <a href="${pageContext.request.contextPath}pub/blog/post4.png" class="button">Read More</a>
             </div>
         </div>
     </div>
