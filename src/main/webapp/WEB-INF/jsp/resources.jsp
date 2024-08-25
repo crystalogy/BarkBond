@@ -1,7 +1,7 @@
 <jsp:include page="include/header.jsp" />
 <jsp:include page="include/navbar.jsp" />
 
-<link rel="stylesheet" href="${pageContext.request.contextPath}pub\css\resourcesStyles.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}pub\css\resources.css">
 
 
 
