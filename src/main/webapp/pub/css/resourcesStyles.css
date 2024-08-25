@@ -1,11 +1,16 @@
+body{
+    background-color: #F5F5F5 !important;
+}
+
 .accordion-container {
     display: flex;
-    align-items: center; /* Center children vertically */
-    min-height: 100vh; /* Full viewport height */
-    flex-direction: column; /* Stack children vertically */
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
     margin-top: 5%;
 }
 
 .accordion {
-    width: 70%; /* Smaller width, adjust as needed */
+    width: 70%;
+    background-color: white;
 }
