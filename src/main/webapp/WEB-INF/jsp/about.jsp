@@ -30,7 +30,7 @@
 
 
     <div class="text-section">
-        <h2>Our Mission</h2>
+        <h1>Our Mission</h1>
         <p>I believe that every animal deserves a chance to be loved and cherished. Eevee's legacy lives on through every adoption and every pet whose life is changed for the better. I am committed to making a difference, one rescue pet at a time. Thank you for joining me in this mission and for helping me honor Eevee's memory. Together, we can create a brighter future for countless animals.</p>
     </div>
 </div>
