@@ -6,7 +6,7 @@ body {
 
 .about-hero {
     background: linear-gradient(to bottom right, #f9f9f9, #e0e0e0);
-    padding: 60px 20px;
+    padding: 30px 20px;
     text-align: center;
     border-bottom: 3px solid #ccc;
 }
@@ -36,7 +36,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 30px 20px;
     flex-wrap: wrap;
 }
 
@@ -45,13 +45,16 @@ body {
     /*min-width: 300px;*/
     width: auto;
     text-align: center;
+    padding-right: 20px;
 }
 
 .eevee-image {
-    width: 80%;
+    /*height: 400px;*/
+    width: 52%;
     max-width: 400px;
     border-radius: 20px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    float: right;
 }
 
 .text-section {
