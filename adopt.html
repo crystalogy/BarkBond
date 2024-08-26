@@ -200,8 +200,8 @@
   <div class="pagination" id="adoptPagination">
     <a href="#"><link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
       <span class="material-icons-round arrows">arrow_back_ios</span></a>
-    <a href="#">1</a>
-    <a href="#" class="active">2</a>
+    <a href="#" class="active">1</a>
+    <a href="#">2</a>
     <a href="#">3</a>
     <a href="#">4</a>
     <a href="#">5</a>
@@ -242,28 +242,26 @@
 
   document.addEventListener('DOMContentLoaded', function() {
     const animals = [
-      { photoUrl: '../webapp/pub/images/luka.jpg', name: 'Luka', breed: 'Husky Mix', gender: 'Male', age: '10 years' },
-      { photoUrl: '../webapp/pub/images/violet.jpg', name: 'Violet', breed: 'Pit Bull Terrier Mix ', gender: 'Female', age: '6 years' },
+      { photoUrl: '../BarkBond/src/main/webapp/pub/images/luka.jpg', name: 'Luka', breed: 'Husky Mix', gender: 'Male', age: '10 years' },
+      { photoUrl: '../BarkBond/src/main/webapp/pub/images/violet.jpg', name: 'Violet', breed: 'Pit Bull Terrier Mix ', gender: 'Female', age: '6 years' },
 
-      { photoUrl: '../webapp/pub/images/nala.jpg', name: 'Nala', breed: 'Domestic Short Hair & Siamese', gender: 'Female', age: '2 years' },
-      // { photoUrl: '../webapp/pub/images/jem.jpg', name: 'Jem', breed: 'Labrador Retriever Mix', gender: 'Female', age: '11 years' },
-      { photoUrl: '../webapp/pub/images/winky.jpg', name: 'Winky', breed: 'Oilute Calico & Domestic Short Hair', gender: 'Female', age: '1 year' },
-      { photoUrl: '../webapp/pub/images/leo.jpg', name: 'Leo', breed: 'Siberian Husky', gender: 'Male', age: '3 years' },
-      { photoUrl: '../webapp/pub/images/dani.jpg', name: 'Dani', breed: 'Labrador Retriever', gender: 'Female', age: '1 year' },
-      { photoUrl: '../webapp/pub/images/buddy.jpg', name: 'Buddy', breed: 'Domestic Short Hair & Maine Coon Mix', gender: 'Male', age: '1 year' },
-      { photoUrl: '../webapp/pub/images/luna.jpeg', name: 'Luna', breed: 'Pomeranian Mix', gender: 'Female', age: '1 year' },
-      { photoUrl: '../webapp/pub/images/wilbur.jpg', name: 'Wilbur', breed: 'Pet Bail Bond Mix', gender: 'Male', age: '1 year' },
-      { photoUrl: '../webapp/pub/images/rango.jpg', name: 'Rango', breed: 'Bearded Dragon', gender: 'Female', age: '2 years' },
-      { photoUrl: '../webapp/pub/images/mirabelle.jpeg', name: 'Mirabelle', breed: 'Sheep', gender: 'Female', age: '3 years' },
-      { photoUrl: '../webapp/pub/images/minnie.jpg', name: 'Minnie', breed: 'Fainting Goat', gender: 'Female', age: '3 years' },
-      { photoUrl: '../webapp/pub/images/stewie.jpg', name: 'Stewie', breed: 'Jenday Conure', gender: 'Female', age: '2 years' },
-      { photoUrl: '../webapp/pub/images/hal.jpeg', name: 'Hal', breed: 'Rex', gender: 'Male', age: '1 year' },
-      { photoUrl: '../webapp/pub/images/martie.jpg', name: 'Martie', breed: 'Pony', gender: 'Female', age: '20 years' },
-      { photoUrl: '../webapp/pub/images/hari.jpg', name: 'Hari', breed: 'Box Turtle', gender: 'Male', age: '40 years' },
-      { photoUrl: '../webapp/pub/images/jaheira.jpg', name: 'Jaheira', breed: 'Leopard Gecko', gender: 'Female', age: '1 year' }
+      { photoUrl: '../BarkBond/src/main/webapp/pub/images/nala.jpg', name: 'Nala', breed: 'Domestic Short Hair & Siamese', gender: 'Female', age: '2 years' },
+      // { photoUrl: '../BarkBond/src/main/webapp/pub/images/jem.jpg', name: 'Jem', breed: 'Labrador Retriever Mix', gender: 'Female', age: '11 years' },
+      { photoUrl: '../BarkBond/src/main/webapp/pub/images/winky.jpg', name: 'Winky', breed: 'Oilute Calico & Domestic Short Hair', gender: 'Female', age: '1 year' },
+      { photoUrl: '../BarkBond/src/main/webapp/pub/images/leo.jpg', name: 'Leo', breed: 'Siberian Husky', gender: 'Male', age: '3 years' },
+      { photoUrl: '../BarkBond/src/main/webapp/pub/images/dani.jpg', name: 'Dani', breed: 'Labrador Retriever', gender: 'Female', age: '1 year' },
+      { photoUrl: '../BarkBond/src/main/webapp/pub/images/buddy.jpg', name: 'Buddy', breed: 'Domestic Short Hair & Maine Coon Mix', gender: 'Male', age: '1 year' },
+      { photoUrl: '../BarkBond/src/main/webapp/pub/images/luna.jpeg', name: 'Luna', breed: 'Pomeranian Mix', gender: 'Female', age: '1 year' },
+      { photoUrl: '../BarkBond/src/main/webapp/pub/images/wilbur.jpg', name: 'Wilbur', breed: 'Pet Bail Bond Mix', gender: 'Male', age: '1 year' },
+      { photoUrl: '../BarkBond/src/main/webapp/pub/images/rango.jpg', name: 'Rango', breed: 'Bearded Dragon', gender: 'Female', age: '2 years' },
+      { photoUrl: '../BarkBond/src/main/webapp/pub/images/mirabelle.jpeg', name: 'Mirabelle', breed: 'Sheep', gender: 'Female', age: '3 years' },
+      { photoUrl: '../BarkBond/src/main/webapp/pub/images/minnie.jpg', name: 'Minnie', breed: 'Fainting Goat', gender: 'Female', age: '3 years' },
+      { photoUrl: '../BarkBond/src/main/webapp/pub/images/stewie.jpg', name: 'Stewie', breed: 'Jenday Conure', gender: 'Female', age: '2 years' },
+      { photoUrl: '../BarkBond/src/main/webapp/pub/images/hal.jpeg', name: 'Hal', breed: 'Rex', gender: 'Male', age: '1 year' },
+      { photoUrl: '../BarkBond/src/main/webapp/pub/images/martie.jpg', name: 'Martie', breed: 'Pony', gender: 'Female', age: '20 years' },
+      { photoUrl: '../BarkBond/src/main/webapp/pub/images/hari.jpg', name: 'Hari', breed: 'Box Turtle', gender: 'Male', age: '40 years' },
+      { photoUrl: '../BarkBond/src/main/webapp/pub/images/jaheira.jpg', name: 'Jaheira', breed: 'Leopard Gecko', gender: 'Female', age: '1 year' }
 
-
-      // Add more animal objects as needed
     ];
 
     const cardsContainer = document.getElementById('cards');
