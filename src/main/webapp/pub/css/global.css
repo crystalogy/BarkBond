@@ -27,6 +27,11 @@ header {
     max-width: 100%;
 }
 
+/* Hides the default bootstrap dropdown arrow on mobile menu */
+.mobile-nav::after {
+    display: none !important;
+}
+
 .mainnav {
     flex-grow: 1 !important;
     display: flex !important;
