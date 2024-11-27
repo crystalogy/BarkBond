@@ -32,6 +32,10 @@ header {
     display: none !important;
 }
 
+.mobile-menu::after {
+    display: none !important;
+}
+
 @media (min-width: 701px) {
     .mainnav {
         flex-grow: 1 !important;
