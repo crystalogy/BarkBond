@@ -378,15 +378,39 @@
     clip-path: polygon(100% 0, 70% 0, 80% 24%, 70% 100%, 30% 100%, 0 0);
 }
 
+@media (max-width: 690px) {
+    .index-hero .index-hero-ul {
+        grid-template-columns: 1fr;
+    }
+    .index-hero .index-hero-ul li {
+        display: none; /* Hide all list items by default */
+    }
+    .index-hero .index-hero-ul li:first-child {
+        display: block; /* Display only the first list item */
+        transform: scale(0.8);
+    }
+    .index-hero-ul {
+        margin: 40px 20px;
+        padding-top: 120px;
+    }
+    #hero-phrase{
+        font-size: 50px !important;
+    }
+    .index-hero{
+        height: 500px;
+    }
+}
 
 
 
-@media (min-width: 450px) {
+@media (min-width: 691px) {
     .index-hero-ul {
         margin: 140px 40px;
     }
 }
-@media (min-width: 600px){
+
+
+@media (min-width: 700px){
     :root {
         --columns: 5;
     }
